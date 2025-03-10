@@ -31,8 +31,7 @@ console.log("Hello World");
         button2.onclick = buyWeapon;
         button3.innerText = "Go to town square";
         button3.onclick = goTown;
-        text.innerText = "You enter the store.";//modify my display text in the commentary log to "You enter the store."
-                                                
+        text.innerText = "You enter the store.";//modify my display text in the commentary log to "You enter the store."  
     }
     //Create an interaction where you go to cave/home
     function goCave() {
@@ -46,4 +45,13 @@ console.log("Hello World");
     button1.onclick = goStore;
     button2.onclick = goCave; //takes you to the cave button/interactive options
     button3.onclick = fightDragon; //takes you to the arena to interactive state with FiRedragon
-   
+    //Adding three new functions for HP, weapon, and leave
+function myHealth() {
+
+}
+function myWeapon() {
+
+}
+function goTown() {
+    
+}
