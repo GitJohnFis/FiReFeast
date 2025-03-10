@@ -24,7 +24,10 @@ console.log("Hello World");
     const monsterHealthText = document.querySelector("#monsterHealthText")
     //Create an interaction function that lets user "Go to store"
     function goStore() {
-        console.log("Going to store.");
+        const info = document.querySelector("#button1");
+        button1.innerText = "Buy 10 health (10 gold)";
+        button2.innerText = "Buy weapon (30 gold)";
+        button3.innerText = "Go to town square"; //Change the text appearence after button clicked
     }
     //Create an interaction where you go to cave/home
     function goCave() {
@@ -37,3 +40,5 @@ console.log("Hello World");
     //intiailiazing buttons
     button1.onclick = goStore;
     button2.onclick = goCave; //takes you to the cave button/interactive options
+    button3.onclick = fightDragon; //takes you to the arena to interactive state with FiRedragon
+   
