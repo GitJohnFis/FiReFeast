@@ -84,7 +84,9 @@ function myWeapon() {   // create function to take the actions that happen in "s
     else {
 text.innerText = "You do not have enough gold to buy a weapon.";
     }
-  }  //recreate the text.innerText to show the new weapon and add a ""
+  } else {
+    text.innerText = "You already have the most powerful weapon!";//Create else statement to show commmentary log when you have the "most" powerful weapon
+  } //recreate the text.innerText to show the new weapon and add a ""
 }
 //creating an empty location function to take care of goTown and goStore repetions
 function update(location) {
