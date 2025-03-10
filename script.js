@@ -65,5 +65,9 @@ function myWeapon() {
 }
 //creating an empty location function to take care of goTown and goStore repetions
 function update(location) {
-    
+
 }
+//In any RPG you need to make data structures for the different locations e.g Cave, Store, town square
+const lcoations = [];
+const cat {}  // use objects to build my locations array or options
+console.log(cat)
