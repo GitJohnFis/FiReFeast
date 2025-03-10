@@ -3,7 +3,7 @@ console.log("Hello World");
    let exp = 0;
    let health = 100;
    let armor = 10;
-    let gold = 650; //Update gold amount to 650 for testing buyWeapon function. then buy all weapos on preview
+    let gold = 50; //Update gold amount to 650 for testing buyWeapon function. then buy all weapos on preview
    let currentWeaponIndex = 0;
     //undeclared variable 
       let fighting;
@@ -68,7 +68,7 @@ text.innerText = "You do not have enough gold to buy health.";//create a message
     }
 }
 function myWeapon() {   // create function to take the actions that happen in "store"
-          if(currentWeaponIndex < weapons.length)                //- Modified the `if` condition in the `buyWeapon` function to check if `currentWeaponIndex` is less than the length of the `weapons` array.
+          if(currentWeaponIndex < weapons.length - 1)    //Fix array indexing error in buyWeapon function.                           //- Modified the `if` condition in the `buyWeapon` function to check if `currentWeaponIndex` is less than the length of the `weapons` array.
                                                     //  - Ensured future compatibility for adding new values to the `weapons` array.                              //- Implemented a check to ensure players cannot purchase more weapons after acquiring the best weapon.
       {                                            // - Updated the `buyWeapon` function to include this validation.
     if (gold >= 30){
