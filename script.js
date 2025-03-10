@@ -59,9 +59,11 @@ console.log("Hello World");
     button2.onclick = goCave; //takes you to the cave button/interactive options
     button3.onclick = fightDragon; //takes you to the arena to interactive state with FiRedragon
     //Adding three new functions for HP, weapon, and leave
-function myHealth() {    //take the actions that happern in "store" and "cave"
+function myHealth() { 
+    if (gold >= 10) {  //take the actions that happern in "store" and "cave"
 gold -= 10; goldText.innerText = gold;//Make gold and health stats change when buying from store
-health += 10; healthText.innerText = health;
+health += 10; healthText.innerText = health;// make an if statement ot buy health with gold
+    }
 }
 function myWeapon() {
 
