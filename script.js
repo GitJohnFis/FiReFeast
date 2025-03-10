@@ -252,6 +252,10 @@ gold += Math.floor(monsters[fighting].level * 6.7) + 1;
 function lose() {//Working on th lsoe function make the In the lose function, call the update function and pass in the non existent sixth object of locations array.
 update(locations[5]);
 }
+//Below the lose function create the winGame functiuon
+function winGame() {
+    update(location[6]);
+  }
 //Create a restart function for when you get revived to life LEL
 function restart() {
     exp = 0;
