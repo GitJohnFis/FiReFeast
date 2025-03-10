@@ -71,7 +71,8 @@ function update(location) {
 const locations = [
     {
 name = "town square", //keep commas between an array NOT semi colons
-"button text" = [], //This is a button text within an array done correctly
+"button text" = ["Go to store", "Go to cave", "Figh FiRedragon"], //This is a button text within an array done correctly
+"button functions" = [goStore, goCave, fightDragon] // use onclick arrays that will achieve the buttons functions
     }
 ];
  //use string in the key of an object if multiple text need to be shown
