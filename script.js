@@ -21,3 +21,8 @@ console.log("Hello World");
     const goldText = document.querySelector("#goldText");
     const BeAstStats = document.querySelector("#BeAstStats");
     const monsterName = document.querySelector("#monsterName");
+    const monsterHealthText = document.querySelector("#monsterHealthText")
+    //Create an interaction function that lets user "Go to store"
+    function goStore() {
+        
+    }
