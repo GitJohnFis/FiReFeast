@@ -24,6 +24,7 @@ console.log("Hello World");
     const monsterHealthText = document.querySelector("#monsterHealthText")
     //Create an interaction function that lets user "Go to store"
     function goTown() { 
+        update(locations[0]);
         // const info = document.querySelector("#button1"); //Modify the innerText to my stats  //Change the text appearence after button clicked
         // button1.innerText = "Go to store";                                                   //Update for buttons in an instance they are clicked again
         // button1.onclick = goStore;                     //Modify the onclick to myHealth,Weapon, instead of buy                                       //lead the button click to change their previou stats
@@ -65,7 +66,7 @@ function myWeapon() {
 }
 //creating an empty location function to take care of goTown and goStore repetions
 function update(location) {
-    button1.innerText = "Go to store";
+    button1.innerText = location["button text"];//use arrays instead of bracket notations "Go to store"
     button2.innerText = "Go to cave";
     button3.innerText = "Fight dragon";
     button1.onclick = goStore;
