@@ -159,6 +159,8 @@ function sellWeapon() { //Inside the `if` statement, set `gold` to 15 more than 
 if(inventory.length > 1){
 gold += 15
 goldText.innerText = gold;
-let currentWeapon;//create current weapon variable with let
+let currentWeapon = inventory.shift();//create current weapon variable with let
+ 
+//Use shift() to assign the first element of inventory to currentWeapon.
 }
 }
