@@ -10,6 +10,6 @@ console.log("Hello World");
       let BEaSthealth;
        let inventory = ["stick"]
     //Buttons interaction 
-    const button1 = document.getquerySelector("#button1");
-]   const button2 = document.getquerySelector("#button2");  
-    const button3 = document.getquerySelector("#button3");
+    const button1 = document.querySelector("#button1");
+]   const button2 = document.querySelector("#button2");  
+    const button3 = document.querySelector("#button3");
