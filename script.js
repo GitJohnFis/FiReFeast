@@ -51,8 +51,8 @@ console.log("Hello World");
        update(locations[2]);//delete console.log and add a location array in goCave function
     }
     //Create an interaction to fight the BeAst dragon
-    function fightDragon() {
-        console.log("Fighting FiRedragon")
+    function fightDragon() {//Set `fighting` to 1 for beast and 2 for dragon.
+    fighting = 2;             // console.log("Fighting FiRedragon")
     }
     //intiailiazing buttons
     button1.onclick = goStore;
@@ -169,10 +169,11 @@ text: "You enter the cave. You see some monsters."
 console.log(cat)
 //create a new fightSlime and fightBeast functions
 function fightSlime() {//Set fighting to slime index and call goFight in fightSlime function.
-
+fighting = 0;
+// goFight();
 }
 function fightBeast() {
-
+fightig = 1;
 }
 //create a sellWeapon function for all weapons after getting the most OP weapon
 function sellWeapon() { //Inside the `if` statement, set `gold` to 15 more than its current value.//- Updated `goldText.innerText` to reflect the new gold amount.
