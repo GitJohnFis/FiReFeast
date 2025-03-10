@@ -30,3 +30,8 @@ console.log("Hello World");
     function goCave() {
         console.log("Going to cave.");
     }
+    //Create an interaction to fight the BeAst dragon
+    function fightDragon() {
+        console.log("Fighting FiRedragon")
+    }
+    //intiailiazing buttons
