@@ -69,7 +69,8 @@ text.innerText = "You do not have enough gold to buy health.";//create a message
 }
 function myWeapon() {   // create function to take the actions that happen in "store"
     if (gold >= 30){
-  
+  gold -= 30; 
+  currentWeaponIndex ++ 1; //use the curretWeaponIndex to  use the increment operator
     }
 }
 //creating an empty location function to take care of goTown and goStore repetions
