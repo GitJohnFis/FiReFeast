@@ -159,6 +159,12 @@ text: "You are in the town square. You see a sign that says \"Store\"." // add t
 "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],//Add a third function into the location object
 "button functions": [fightSlime, fightBeast, goTown],
 text: "You enter the cave. You see some monsters."
+        }, //Create a new object for battle interaction with monster in the location array 
+        {
+        name: "fight",
+"button text": ["Attack", "Dodge", "Run"],
+"button functions": [attack, dodge, goTown],
+text: "You are fighting a monster."
         }
 ];
  //use string in the key of an object if multiple text need to be shown
@@ -189,11 +195,12 @@ text.innerText = "Don't sell your only weapon!"
 }
 //Create goFight function to manage monster fight logic.
 function goFight() {
-
+  update(locations[3])           // In the `goFight` function, called the `update` function with the fourth object in the `locations` array as an argument.
 }
+//Create two combat interactive options atk and dodg
 function attack() {
 
 }
 function dodge() {
-    
+
 }
