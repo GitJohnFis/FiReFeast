@@ -197,7 +197,9 @@ text.innerText = "Don't sell your only weapon!"
 function goFight() {
   update(locations[3])           // In the `goFight` function, called the `update` function with the fourth object in the `locations` array as an argument.
      monsterHealth = monsters[fighting].health;                       //Set the monster health bars to their beast
-     monsterStats.style.display = "block"                                           //Display monster stats when Fight dragon button is clicked.
+     monsterStats.style.display = "block";                                          //Display monster stats when Fight dragon button is clicked.
+      monsterName.innerText =  monsters[fighting].name;                                     //Update the text alongside the new button and style display
+    monsterHealthText.innerText = monsterHealth;
     }
 //Create two combat interactive options atk and dodg
 function attack() {
