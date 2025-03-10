@@ -224,6 +224,7 @@ gold += Math.floor(monsters[fighting].level * 6.7) + 1;
     exp += monsters[fighting].name;                                                  //Show th exp gained in exp = exp + monsters lvl user fought
    goldText.innerText = gold;
    expText.innerText = exp;                                       //Update the values to be displayed now on screen using innerText
+   update(locations[4]);                        //Complete defeatMonster function by calling update with locations[4].<--This does notexist, yet
 }
 function lose() {
 
