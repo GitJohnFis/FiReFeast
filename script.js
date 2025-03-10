@@ -3,7 +3,7 @@ console.log("Hello World");
    let exp = 0;
    let health = 100;
    let armor = 10;
-    let gold = 50;
+    let gold = 650; //Update gold amount to 650 for testing buyWeapon function. then buy all weapos on preview
    let currentWeaponIndex = 0;
     //undeclared variable 
       let fighting;
