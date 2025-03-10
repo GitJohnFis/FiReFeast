@@ -226,7 +226,16 @@ text.innerText = "The " + monsters[fighting].name + "attacks. ";
   if(health <= 0){
 lose()
   }   else if (monsterHealth <= 0 ){
-defeatMonster()
+defeatMonster();
+if (fighting === 2) {
+winGame();
+} else{
+defeatMonster();
+}
+// Inside the `else if` block of the `attack` function, created an `if` and `else` statement.
+// - Checked if `fighting` is equal to 2 (FiRedragon) using the strict equality (===) operator.
+// - Called the `winGame` function if the player is fighting FiRedragon.
+// - Moved the `defeatMonster()` call to the `else` block.
   }                                                   //Create the lose in a battle function with zero or less health in an if/else statement
 }  //Add else if statement to check monsterHealth and call defeatMonster.
 function dodge() {//Create the dodge text to change when interacting with a monster in battle
