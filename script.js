@@ -36,6 +36,7 @@ console.log("Hello World");
 
     }//Drag and drop goTown function above goStore and C & P its declarations
     function goStore() {
+        update(locations[1])
         // const info = document.querySelector("#button1"); //Change the text appearence after button clicked
         // button1.innerText = "Buy 10 health (10 gold)";//Update for buttons in an instance they are clicked again
         // button1.onclick = buyHealth; //lead the button click to change their previou stats
@@ -72,7 +73,7 @@ function update(location) {
     button1.onclick = location["button functions"][0]; //Follow the same pattern with the innerText to the onclick values
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
-    text.innerText = "You are in the town square. You see a sign that says \"Store\".";//use dot notation to target location text
+    text.innerText = location.text;//use dot notation to target location text
   }
 
 //In any RPG you need to make data structures for the different locations e.g Cave, Store, town square
@@ -96,3 +97,10 @@ text: "You are in the town square. You see a sign that says \"Store\"." // add t
     // console.log(cat.name) //*Whiskers
   // use objects to build my locations array or options
 console.log(cat)
+//create a new fightSlime and fightBeast functions
+function fightSlime() {
+
+}
+function fightBeast() {
+    
+}
