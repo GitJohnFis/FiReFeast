@@ -26,12 +26,12 @@ console.log("Hello World");
     function goTown() { 
         const info = document.querySelector("#button1"); //Modify the innerText to my stats  //Change the text appearence after button clicked
         button1.innerText = "Go to store";                                                   //Update for buttons in an instance they are clicked again
-        button1.onclick = buyHealth;                                                            //lead the button click to change their previou stats
+        button1.onclick = goStore;                     //Modify the onclick to myHealth,Weapon, instead of buy                                       //lead the button click to change their previou stats
         button2.innerText = "Go to cave";
-        button2.onclick = buyWeapon;
+        button2.onclick = goCave;
         button3.innerText = "Fight FiRedragon";
-        button3.onclick = goTown;
-        text.innerText = "You enter the store.";
+        button3.onclick = fightDragon;
+        text.innerText = "You are in the town square, You see a sign that says Store.";
 
     }//Drag and drop goTown function above goStore and C & P its declarations
     function goStore() {
