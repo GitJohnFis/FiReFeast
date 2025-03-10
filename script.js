@@ -191,3 +191,9 @@ text.innerText = "Don't sell your only weapon!"
 function goFight() {
 
 }
+function attack() {
+
+}
+function dodge() {
+    
+}
