@@ -155,8 +155,10 @@ function fightBeast() {
 
 }
 //create a sellWeapon function for all weapons after getting the most OP weapon
-function sellWeapon() {
+function sellWeapon() { //Inside the `if` statement, set `gold` to 15 more than its current value.//- Updated `goldText.innerText` to reflect the new gold amount.
 if(inventory.length > 1){
-
+gold += 15
+goldText.innerText = gold;
+let currentWeapon;//create current weapon variable with let
 }
 }
