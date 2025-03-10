@@ -179,7 +179,13 @@ text: "You are fighting a monster."
     "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
     "button functions": [restart, restart, restart],
     text: "You die. &#x2620;" //SKull emoji will be shown using this error code
-    }
+    }, //Add another object in locarions array for a winning user below the death 
+    {
+       name: "win",
+        "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+    "button functions": [restart, restart, restart],
+    text: "You defeat the FiRedragon! YOU WIN THE GAME! &#x1F389;"
+      }
 ];
  //use string in the key of an object if multiple text need to be shown
 
@@ -219,7 +225,7 @@ function goFight() {
 function attack() { //Build attack function to update text message with monster name using the concatenation operator.
 text.innerText = "The " + monsters[fighting].name + "attacks. ";
    text.innerText += " You attack it with your "  + weapon[currentWeaponIndex].name + ".";// On a new line in the `attack` function, used the addition assignment operator (+=) to add the string " You attack it with your <weapon>." to the text value.                                                      //Add a new text message for the weapon you are battling with ie atk 
-    health -= monsters[fighting].level; //Update health to subtract monster's level.
+    health -= getMonsterAttackValue(monsters[fighting].level); //Update health to subtract monster's level. //Your health decreases by the monster's attack value, which is calculated using the monster's level.
     monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * exp) + 1; //Introduce Math object and use random number generation in attack logic.
     healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;                 //Update the innerText of user(s) health and monsters health bar
@@ -227,7 +233,7 @@ text.innerText = "The " + monsters[fighting].name + "attacks. ";
 lose()
   }   else if (monsterHealth <= 0 ){
 defeatMonster();
-if (fighting === 2) {
+if (fighting === 2) {                             //Make my game complex beyond it's feature-completed amd maek stages fun and engaging give monsters a dynamic attack value.
 winGame();
 } else{
 defeatMonster();
