@@ -178,7 +178,7 @@ text: "You are fighting a monster."
     name: "lose",
     "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
     "button functions": [restart, restart, restart],
-    text: "You die. &#x2620;"
+    text: "You die. &#x2620;" //SKull emoji will be shown using this error code
     }
 ];
  //use string in the key of an object if multiple text need to be shown
