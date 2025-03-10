@@ -13,3 +13,11 @@ console.log("Hello World");
     const button1 = document.querySelector("#button1");
 ]   const button2 = document.querySelector("#button2");  
     const button3 = document.querySelector("#button3");
+    //Create commentary logs for any actions in game
+    const text = document.querySelector("#text");
+    const expText = document.querySelector("#expText");
+    const healthText = document.querySelector("#healthText");
+    const armorText = document.querySelector("#armorText")
+    const goldText = document.querySelector("#goldText");
+    const BeAstStats = document.querySelector("#BeAstStats");
+    const monsterName = document.querySelector("#monsterName");
