@@ -209,6 +209,9 @@ text.innerText = "The " + monsters[fighting].name + "attacks. ";
     monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * exp) + 1; //Introduce Math object and use random number generation in attack logic.
     healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;                 //Update the innerText of user(s) health and monsters health bar
+  if(health <= 0){
+lose()
+  }                                                      //Create the lose in a battle function with zero or less health in an if/else statement
 }
 function dodge() {
 
