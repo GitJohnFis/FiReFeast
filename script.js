@@ -211,8 +211,17 @@ text.innerText = "The " + monsters[fighting].name + "attacks. ";
   monsterHealthText.innerText = monsterHealth;                 //Update the innerText of user(s) health and monsters health bar
   if(health <= 0){
 lose()
-  }                                                      //Create the lose in a battle function with zero or less health in an if/else statement
+  }   else if (monsterHealth <= 0 ){
+defeatMonster()
+  }                                                   //Create the lose in a battle function with zero or less health in an if/else statement
+}  //Add else if statement to check monsterHealth and call defeatMonster.
+function dodge() {//Create the dodge text to change when interacting with a monster in battle
+text.innerText = "You dodge the attack from the " + monsters[fighting].name + "."; //"You dodge the attack from the " + monsters[fighting].name + "."
 }
-function dodge() {
+//Create defeatMonster and lose function
+function defeatMonster() {
+
+}
+function lose() {
 
 }
