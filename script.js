@@ -219,7 +219,8 @@ function dodge() {//Create the dodge text to change when interacting with a mons
 text.innerText = "You dodge the attack from the " + monsters[fighting].name + "."; //"You dodge the attack from the " + monsters[fighting].name + "."
 }
 //Create defeatMonster and lose function
-function defeatMonster() {
+function defeatMonster() { //Update gold calculation in defeatMonster function to be 6.7 times the monsters lvl
+gold += Math.floor(monsters[fighting].level * 6.7) + 1;
 
 }
 function lose() {
