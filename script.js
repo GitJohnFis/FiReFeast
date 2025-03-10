@@ -82,6 +82,7 @@ function update(location) {
   }
 
 //In any RPG you need to make data structures for the different locations e.g Cave, Store, town square
+const weapons = [] //create a new weapons array function above locations array
 const locations = [
     {
 name = "town square", //keep commas between an array NOT semi colons
