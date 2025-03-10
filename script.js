@@ -24,10 +24,15 @@ console.log("Hello World");
     const monsterHealthText = document.querySelector("#monsterHealthText")
     //Create an interaction function that lets user "Go to store"
     function goStore() {
-        const info = document.querySelector("#button1");
-        button1.innerText = "Buy 10 health (10 gold)";
+        const info = document.querySelector("#button1"); //Change the text appearence after button clicked
+        button1.innerText = "Buy 10 health (10 gold)";//Update for buttons in an instance they are clicked again
+        button1.onclick = buyHealth; //lead the button click to change their previou stats
         button2.innerText = "Buy weapon (30 gold)";
-        button3.innerText = "Go to town square"; //Change the text appearence after button clicked
+        button2.onclick = buyWeapon;
+        button3.innerText = "Go to town square";
+        button3.onclick = goTown;
+        text.innerText = "You enter the store.";//modify my display text in the commentary log to "You enter the store."
+                                                
     }
     //Create an interaction where you go to cave/home
     function goCave() {
