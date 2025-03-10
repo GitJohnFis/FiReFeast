@@ -35,3 +35,5 @@ console.log("Hello World");
         console.log("Fighting FiRedragon")
     }
     //intiailiazing buttons
+    button1.onclick = goStore;
+    button2.onclick = goCave; //takes you to the cave button/interactive options
