@@ -72,8 +72,15 @@ const locations = [
     {
 name = "town square", //keep commas between an array NOT semi colons
 "button text" = ["Go to store", "Go to cave", "Figh FiRedragon"], //This is a button text within an array done correctly
-"button functions" = [goStore, goCave, fightDragon] // use onclick arrays that will achieve the buttons functions
-    }
+"button functions" = [goStore, goCave, fightDragon], // use onclick arrays that will achieve the buttons functions
+text: "You are in the town square. You see a sign that says \"Store\"." // add text properties from the innertext values
+    },
+        {
+        name: "store",
+        "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],//include the second obk=ject to my locations array
+        "button functions": [buyHealth, buyWeapon, goTown],
+        text: "You enter the store."
+        }
 ];
  //use string in the key of an object if multiple text need to be shown
 
