@@ -186,3 +186,7 @@ text.innerText = "You sold a " + currentWeapon + "."; //Make sure that commentar
 text.innerText = "Don't sell your only weapon!"
 }
 }
+//Create goFight function to manage monster fight logic.
+function goFight() {
+
+}
