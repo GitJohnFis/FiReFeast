@@ -71,6 +71,8 @@ function myWeapon() {   // create function to take the actions that happen in "s
     if (gold >= 30){
   gold -= 30; 
   currentWeaponIndex ++ 1; //use the curretWeaponIndex to  use the increment operator
+  goldText.innerText = gold;
+  text.innerText = "You now have a new weapon." //create the commentary log when you purchase a new weapon from store
     }
 }
 //creating an empty location function to take care of goTown and goStore repetions
