@@ -68,13 +68,15 @@ function update(location) {
 
 }
 //In any RPG you need to make data structures for the different locations e.g Cave, Store, town square
-const lcoations = [
-
-
+const locations = [
+    {
+name = "town square", //keep commas between an array NOT semi colons
+"button text" = [], //This is a button text within an array done correctly
+    }
 ];
  //use string in the key of an object if multiple text need to be shown
 
     // console.log["Number of legs"] or 
     // console.log(cat.name) //*Whiskers
-}  // use objects to build my locations array or options
+  // use objects to build my locations array or options
 console.log(cat)
