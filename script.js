@@ -68,7 +68,8 @@ text.innerText = "You do not have enough gold to buy health.";//create a message
     }
 }
 function myWeapon() {   // create function to take the actions that happen in "store"
-         if(currentWeaponIndex < 3)                                              //- Implemented a check to ensure players cannot purchase more weapons after acquiring the best weapon.
+          if(currentWeaponIndex < weapons.length)                //- Modified the `if` condition in the `buyWeapon` function to check if `currentWeaponIndex` is less than the length of the `weapons` array.
+                                                    //  - Ensured future compatibility for adding new values to the `weapons` array.                              //- Implemented a check to ensure players cannot purchase more weapons after acquiring the best weapon.
       {                                            // - Updated the `buyWeapon` function to include this validation.
     if (gold >= 30){
   gold -= 30; 
@@ -78,8 +79,8 @@ function myWeapon() {   // create function to take the actions that happen in "s
   text.innerText = "You now have a " + newWeapon + "."  //create the commentary log when you purchase a new weapon from store
   inventory.push(myWeapon); //show the log commentary of the new equipped weapon
   text.innerText += " In your inventory you have: " + inventory//after the updated innerText for the new weapon log commentary include the inventory text using a second innerText with +=
-  //add the inventory operation by concatinating
-    }// add an else statement if the gold you have is insufficient 
+                                                                //add the inventory operation by concatinating
+    }                                                              // add an else statement if the gold you have is insufficient 
     else {
 text.innerText = "You do not have enough gold to buy a weapon.";
     }
