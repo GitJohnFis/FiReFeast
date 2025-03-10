@@ -64,7 +64,7 @@ function myHealth() {
 gold -= 10; goldText.innerText = gold;//Make gold and health stats change when buying from store
 health += 10; healthText.innerText = health;// make an if statement ot buy health with gold
     } else {                  //create an else function to action a statementif you don't have enough gold
-
+text.innerText = "You do not have enough gold to buy health.";//create a message if you do not have gold to buy health
     }
 }
 function myWeapon() {
