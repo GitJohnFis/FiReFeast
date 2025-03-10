@@ -67,8 +67,10 @@ health += 10; healthText.innerText = health;// make an if statement ot buy healt
 text.innerText = "You do not have enough gold to buy health.";//create a message if you do not have gold to buy health
     }
 }
-function myWeapon() {
-
+function myWeapon() {   // create function to take the actions that happen in "store"
+    if (gold >= 30){
+  
+    }
 }
 //creating an empty location function to take care of goTown and goStore repetions
 function update(location) {
@@ -92,7 +94,7 @@ const weapons = [
         power = 30
     },
     {
-     name = "claw hammer", //Create four different weapons this one called "claw hammer"
+      name = "claw hammer", //Create four different weapons this one called "claw hammer"
         power = 50
     },
     {
