@@ -156,5 +156,7 @@ function fightBeast() {
 }
 //create a sellWeapon function for all weapons after getting the most OP weapon
 function sellWeapon() {
+if(inventory.length > 1){
 
+}
 }
