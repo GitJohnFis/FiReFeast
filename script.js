@@ -99,8 +99,8 @@ function update(location) {
     button1.onclick = location["button functions"][0]; //Follow the same pattern with the innerText to the onclick values
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
-    text.innerText = location.text;//use dot notation to target location text
-  }
+    text.innerHTML = location.text;//use dot notation to target location text
+  }// update the text.innerText = text.innerHTML to show the emoticons for the death screen log
 
 //In any RPG you need to make data structures for the different locations e.g Cave, Store, town square
 const weapons = [
