@@ -92,7 +92,7 @@ const weapons = [
         power = 30
     },
     {
-        name = "claw hammer", //Create four different weapons this one called "claw hammer"
+     name = "claw hammer", //Create four different weapons this one called "claw hammer"
         power = 50
     },
     {
