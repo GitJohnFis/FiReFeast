@@ -170,7 +170,7 @@ text: "You are fighting a monster."
  name: "kill monster",
    "button text": ["Go to town square", "Go to town square", "Go to town square"],
    "button functions": [goTown, goTown, goTown],
-  text: "The monster screams Arg! as it dies. You gain experience points and find gold."
+  text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.' //The word "Arg!" should have quotes around it. Besides escaping quotes, there is another way you can include quotation marks inside a string.
     } //Create a fifth object in locations array to address what happen when a use kills a beast
 ];
  //use string in the key of an object if multiple text need to be shown
