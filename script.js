@@ -89,6 +89,12 @@ text: "You are in the town square. You see a sign that says \"Store\"." // add t
         "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],//include the second obk=ject to my locations array
         "button functions": [buyHealth, buyWeapon, goTown],
         text: "You enter the store."
+        },
+        {
+        name: "cave",
+"button text": ["Fight slime", "Fight fanged beast", "Go to town square"],//Add a third function into the location object
+"button functions": [fightSlime, fightBeast, goTown],
+text: "You enter the cave. You see some monsters."
         }
 ];
  //use string in the key of an object if multiple text need to be shown
@@ -102,5 +108,5 @@ function fightSlime() {
 
 }
 function fightBeast() {
-    
+
 }
