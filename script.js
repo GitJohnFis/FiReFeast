@@ -24,12 +24,12 @@ console.log("Hello World");
     const monsterHealthText = document.querySelector("#monsterHealthText")
     //Create an interaction function that lets user "Go to store"
     function goTown() { 
-        const info = document.querySelector("#button1"); //Change the text appearence after button clicked
-        button1.innerText = "Buy 10 health (10 gold)";//Update for buttons in an instance they are clicked again
-        button1.onclick = buyHealth; //lead the button click to change their previou stats
-        button2.innerText = "Buy weapon (30 gold)";
+        const info = document.querySelector("#button1"); //Modify the innerText to my stats  //Change the text appearence after button clicked
+        button1.innerText = "Go to store";                                                   //Update for buttons in an instance they are clicked again
+        button1.onclick = buyHealth;                                                            //lead the button click to change their previou stats
+        button2.innerText = "Go to cave";
         button2.onclick = buyWeapon;
-        button3.innerText = "Go to town square";
+        button3.innerText = "Fight FiRedragon";
         button3.onclick = goTown;
         text.innerText = "You enter the store.";
 
