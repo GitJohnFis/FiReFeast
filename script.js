@@ -86,7 +86,9 @@ text.innerText = "You do not have enough gold to buy a weapon.";
     }
   } else {
     text.innerText = "You already have the most powerful weapon!";//Create else statement to show commmentary log when you have the "most" powerful weapon
-  } //recreate the text.innerText to show the new weapon and add a ""
+     button2.innerText = "Sell weapon for 15 gold";//Allow players to sell old weapons after acquiring the most powerful one.
+button.onclick = sellWeapon;
+    } //recreate the text.innerText to show the new weapon and add a ""
 }
 //creating an empty location function to take care of goTown and goStore repetions
 function update(location) {
@@ -150,5 +152,9 @@ function fightSlime() {
 
 }
 function fightBeast() {
+
+}
+//create a sellWeapon function for all weapons after getting the most OP weapon
+function sellWeapon() {
 
 }
