@@ -75,7 +75,8 @@ function myWeapon() {   // create function to take the actions that happen in "s
   let newWeapon = weapons[currentWeaponIndex].name;//use the dot notation for new weapon
   text.innerText = "You now have a " + newWeapon + "."  //create the commentary log when you purchase a new weapon from store
   inventory.push(myWeapon); //show the log commentary of the new equipped weapon
-  text.innerText += " In your inventory you have: "//after the updated innerText for the new weapon log commentary include the inventory text using a second innerText with +=
+  text.innerText += " In your inventory you have: " + inventory//after the updated innerText for the new weapon log commentary include the inventory text using a second innerText with +=
+  //add the inventory operation by concatinating
     }//recreate the text.innerText to show the new weapon and add a ""
 }
 //creating an empty location function to take care of goTown and goStore repetions
