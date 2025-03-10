@@ -24,5 +24,9 @@ console.log("Hello World");
     const monsterHealthText = document.querySelector("#monsterHealthText")
     //Create an interaction function that lets user "Go to store"
     function goStore() {
-        
+        console.log("Going to store.");
+    }
+    //Create an interaction where you go to cave/home
+    function goCave() {
+        console.log("Going to cave.");
     }
