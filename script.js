@@ -168,7 +168,7 @@ text: "You enter the cave. You see some monsters."
   // use objects to build my locations array or options
 console.log(cat)
 //create a new fightSlime and fightBeast functions
-function fightSlime() {
+function fightSlime() {//Set fighting to slime index and call goFight in fightSlime function.
 
 }
 function fightBeast() {
