@@ -244,6 +244,10 @@ defeatMonster();
 // - Moved the `defeatMonster()` call to the `else` block.
   }                                                   //Create the lose in a battle function with zero or less health in an if/else statement
 }  //Add else if statement to check monsterHealth and call defeatMonster.
+       //Create a new getMonsterAttackValue with parameter to level from monsters
+       function getMonsterAttackValue(level){// create a "hit variable" - This will set the monster's attack to five times their level minus a random number between 0 and the player's xp.
+const hit = (level * 5) - (Math.floor(Math.random() * exp));
+       }
 function dodge() {//Create the dodge text to change when interacting with a monster in battle
 text.innerText = "You dodge the attack from the " + monsters[fighting].name + "."; //"You dodge the attack from the " + monsters[fighting].name + "."
 }
