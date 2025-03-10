@@ -202,8 +202,9 @@ function goFight() {
     monsterHealthText.innerText = monsterHealth;
     }
 //Create two combat interactive options atk and dodg
-function attack() {
-
+function attack() { //Build attack function to update text message with monster name using the concatenation operator.
+text.innerText = "The " + monsters[fighting].name + "attacks. ";
+   text.innerText += " You attack it with your "  + weapon[currentWeaponIndex].name + ".";                                                      //Add a new text message for the weapon you are battling with ie atk 
 }
 function dodge() {
 
