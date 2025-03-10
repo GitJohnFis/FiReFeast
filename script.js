@@ -31,7 +31,7 @@ console.log("Hello World");
         button2.onclick = goCave;
         button3.innerText = "Fight FiRedragon";
         button3.onclick = fightDragon;
-        text.innerText = "You are in the town square, You see a sign that says Store.";
+        text.innerText = "You are in the town square, You see a sign that says \"Store\".";// Remember to us backslathes with double quotes inside of double quotes
 
     }//Drag and drop goTown function above goStore and C & P its declarations
     function goStore() {
