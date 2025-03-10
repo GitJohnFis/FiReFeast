@@ -206,7 +206,7 @@ function attack() { //Build attack function to update text message with monster 
 text.innerText = "The " + monsters[fighting].name + "attacks. ";
    text.innerText += " You attack it with your "  + weapon[currentWeaponIndex].name + ".";// On a new line in the `attack` function, used the addition assignment operator (+=) to add the string " You attack it with your <weapon>." to the text value.                                                      //Add a new text message for the weapon you are battling with ie atk 
     health -= monsters[fighting].level; //Update health to subtract monster's level.
-    monstersHealth -= weapons[currentWeaponIndex].power //
+    monsterHealth -= weapons[currentWeaponIndex].power //
 }
 function dodge() {
 
