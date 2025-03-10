@@ -48,7 +48,7 @@ console.log("Hello World");
     }
     //Create an interaction where you go to cave/home
     function goCave() {
-        console.log("Going to cave.");
+       // console.log("Going to cave.");//delete console.log and add a location array in goCave function
     }
     //Create an interaction to fight the BeAst dragon
     function fightDragon() {
