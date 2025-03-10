@@ -92,6 +92,7 @@ button.onclick = sellWeapon;
 }
 //creating an empty location function to take care of goTown and goStore repetions
 function update(location) {
+    monsterStats.style.display = "none";//The monsters stats should no be displayed after defeated using style and display
     button1.innerText = location["button text"][0];//use arrays instead of bracket notations "Go to store"
     button2.innerText = location["button text"][1];// change all innerText values into location arrays
     button3.innerText = location["button text"][2];
@@ -232,6 +233,7 @@ gold += Math.floor(monsters[fighting].level * 6.7) + 1;
    expText.innerText = exp;                                       //Update the values to be displayed now on screen using innerText
    update(locations[4]);                        //Complete defeatMonster function by calling update with locations[4].<--This does notexist, yet
 }
-function lose() {
-
+function lose() {//Working on th lsoe function make the In the lose function, call the update function and pass in the non existent sixth object of locations array.
+update(locations[5]);
 }
+//Create a restart function for when you get revived to life LEL
