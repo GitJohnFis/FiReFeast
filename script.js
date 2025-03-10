@@ -72,6 +72,7 @@ function myWeapon() {   // create function to take the actions that happen in "s
   gold -= 30; 
   currentWeaponIndex ++ 1; //use the curretWeaponIndex to  use the increment operator
   goldText.innerText = gold;
+  let newWeapon = weapons[currentWeaponIndex];
   text.innerText = "You now have a new weapon." //create the commentary log when you purchase a new weapon from store
     }
 }
