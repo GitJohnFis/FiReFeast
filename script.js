@@ -73,8 +73,8 @@ function myWeapon() {   // create function to take the actions that happen in "s
   currentWeaponIndex ++ 1; //use the curretWeaponIndex to  use the increment operator
   goldText.innerText = gold;
   let newWeapon = weapons[currentWeaponIndex].name;//use the dot notation for new weapon
-  text.innerText = "You now have a new weapon." //create the commentary log when you purchase a new weapon from store
-    }
+  text.innerText = "You now have a " + newWeapon + "." //create the commentary log when you purchase a new weapon from store
+    }//recreate the text.innerText to show the new weapon and add a ""
 }
 //creating an empty location function to take care of goTown and goStore repetions
 function update(location) {
