@@ -226,8 +226,10 @@ function attack() { //Build attack function to update text message with monster 
 text.innerText = "The " + monsters[fighting].name + "attacks. ";
    text.innerText += " You attack it with your "  + weapon[currentWeaponIndex].name + ".";// On a new line in the `attack` function, used the addition assignment operator (+=) to add the string " You attack it with your <weapon>." to the text value.                                                      //Add a new text message for the weapon you are battling with ie atk 
     health -= getMonsterAttackValue(monsters[fighting].level); //Update health to subtract monster's level. //Your health decreases by the monster's attack value, which is calculated using the monster's level.
+    if(isMonsterHit()) {
     monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * exp) + 1; //Introduce Math object and use random number generation in attack logic.
-    healthText.innerText = health;
+    }//ensures that the monster's health only decreases if the isMonsterHit function returns true.
+    healthText.innerText = health;           
   monsterHealthText.innerText = monsterHealth;                 //Update the innerText of user(s) health and monsters health bar
   if(health <= 0){
 lose()
@@ -248,6 +250,7 @@ defeatMonster();
        function getMonsterAttackValue(level){// create a "hit variable" - This will set the monster's attack to five times their level minus a random number between 0 and the player's xp.
 const hit = (level * 5) - (Math.floor(Math.random() * exp));
 console.log(hit);
+return hit > 0 ? hit : 0;
        }
 function dodge() {//Create the dodge text to change when interacting with a monster in battle
 text.innerText = "You dodge the attack from the " + monsters[fighting].name + "."; //"You dodge the attack from the " + monsters[fighting].name + "."
