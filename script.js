@@ -315,7 +315,7 @@ function pick(guess) {
  text.innerText = "You picked " + guess + ". Here are the random numbers:\n";  //insert a new line character escape character befor the last ""                          //Inside the pick function, a constant variable named numbers is initialized and set to an empty array.
 }                                //push a random number in between 0 - 10 for my while loop using push metho0
   for(let i = 0; i < 1; i++)  {
-text.innerText += numbers[i] + \n; //Write the logic to run in the for loop
+    text.innerText += numbers[i] + "\n"; //Write the logic to run in the for loop
   }   
   if(numbers.includes(guess)) {
     text.innerText += "Right! You win 20 gold!";//Add the interactive change to to getting a set of numbers correct
