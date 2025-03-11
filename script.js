@@ -228,7 +228,9 @@ text.innerText = "The " + monsters[fighting].name + "attacks. ";
     health -= getMonsterAttackValue(monsters[fighting].level); //Update health to subtract monster's level. //Your health decreases by the monster's attack value, which is calculated using the monster's level.
     if(isMonsterHit()) {
     monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * exp) + 1; //Introduce Math object and use random number generation in attack logic.
-    }//ensures that the monster's health only decreases if the isMonsterHit function returns true.
+    } else {
+        text.innerText += " You miss.";//create an if else statement for any misses you have in a  battle
+      }                         //ensures that the monster's health only decreases if the isMonsterHit function returns true.
     healthText.innerText = health;           
   monsterHealthText.innerText = monsterHealth;                 //Update the innerText of user(s) health and monsters health bar
   if(health <= 0){
@@ -283,4 +285,10 @@ function restart() {
     armorText.innerText = armor;
     expText.innerText = exp;
     goTown()
+}
+//Create a isMonsterHit function to determine if the monster is hit. complex detail: Math.random() generates a random number between 0 and 1.
+// If this number is greater than 0.2, the function returns true (indicating a hit).
+// Otherwise, it returns false (indicating a miss).
+function isMonsterHit() {
+    return Math.random() > .2;
 }
