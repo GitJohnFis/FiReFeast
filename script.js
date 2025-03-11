@@ -105,20 +105,20 @@ function update(location) {
 //In any RPG you need to make data structures for the different locations e.g Cave, Store, town square
 const weapons = [
     {
-        name = "stick", //Create four different weapons this one called "stick"
-        power = 5
+        name: "stick", //Create four different weapons this one called "stick"
+        power: 5
     },
     {
-        name = "dagger", //Create four different weapons this one called "dagger"
-        power = 30
+        name: "dagger", //Create four different weapons this one called "dagger"
+        power: 30
     },
     {
-      name = "claw hammer", //Create four different weapons this one called "claw hammer"
-        power = 50
+      name: "claw hammer", //Create four different weapons this one called "claw hammer"
+        power: 50
     },
     {
-        name = "sword", //Create four different weapons this one called "sword"
-        power = 100
+        name: "sword", //Create four different weapons this one called "sword"
+        power: 100
     },
 
 ] //create a new weapons array function above locations array
