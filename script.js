@@ -246,7 +246,10 @@ defeatMonster();
 // - Checked if `fighting` is equal to 2 (FiRedragon) using the strict equality (===) operator.
 // - Called the `winGame` function if the player is fighting FiRedragon.
 // - Moved the `defeatMonster()` call to the `else` block.
-  }                                                   //Create the lose in a battle function with zero or less health in an if/else statement
+  }             //To give the weapons durabilty use an if statement to let the weapon break via chance
+  if(Math.random() <= .1) {
+    
+  }                                    //Create the lose in a battle function with zero or less health in an if/else statement
 }  //Add else if statement to check monsterHealth and call defeatMonster.
        //Create a new getMonsterAttackValue with parameter to level from monsters
        function getMonsterAttackValue(level){// create a "hit variable" - This will set the monster's attack to five times their level minus a random number between 0 and the player's xp.
