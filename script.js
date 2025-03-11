@@ -73,7 +73,7 @@ function myWeapon() {   // create function to take the actions that happen in "s
       {                                            // - Updated the `buyWeapon` function to include this validation.
     if (gold >= 30){
   gold -= 30; 
-  currentWeaponIndex ++ 1; //use the curretWeaponIndex to  use the increment operator
+  currentWeaponIndex ++; //use the curretWeaponIndex to  use the increment operator
   goldText.innerText = gold;
   let newWeapon = weapons[currentWeaponIndex].name;//use the dot notation for new weapon
   text.innerText = "You now have a " + newWeapon + "."  //create the commentary log when you purchase a new weapon from store
