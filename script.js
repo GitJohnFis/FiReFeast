@@ -144,7 +144,7 @@ health: 300,
 ]
 const locations = [
     {
-name = "town square", //keep commas between an array NOT semi colons
+name: "town square", //keep commas between an array NOT semi colons
 "button text": ["Go to store", "Go to cave", "Figh FiRedragon"], //This is a button text within an array done correctly
 "button functions": [goStore, goCave, fightDragon], // use onclick arrays that will achieve the buttons functions
 text: "You are in the town square. You see a sign that says \"Store\"." // add text properties from the innertext values
