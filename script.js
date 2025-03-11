@@ -321,7 +321,11 @@ text.innerText += numbers[i] + \n; //Write the logic to run in the for loop
     text.innerText += "Right! You win 20 gold!";//Add the interactive change to to getting a set of numbers correct
     gold += 20;
     goldText.innerText = gold;
-  }                          //below for loop use the includes method. It checks if an array contains a specific element and returns true or false.       //Create a while loop
+  } else {
+    text.innerText += "Wrong! You lose 10 health!";
+    health -= 10;
+    healthText.innerText = health
+  }                   //Punish player for getting wrong set of numbers by lowering their health      //below for loop use the includes method. It checks if an array contains a specific element and returns true or false.       //Create a while loop
 //Another two pick functions called pickTwo and pickEight
 function pickTwo() {
 pick(2)
