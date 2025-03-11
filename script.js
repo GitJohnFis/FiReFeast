@@ -58,7 +58,7 @@
     button1.onclick = goStore;
     button2.onclick = goCave; //takes you to the cave button/interactive options
     button3.onclick = fightDragon; //takes you to the arena to interactive state with FiRedragon
-    //Adding three new functions for HP, weapon, and leave
+                                    //Adding three new functions for HP, weapon, and leave
 function myHealth() { 
     if (gold >= 10) {  //take the actions that happern in "store" and "cave"
 gold -= 10; goldText.innerText = gold;//Make gold and health stats change when buying from store
@@ -87,12 +87,12 @@ text.innerText = "You do not have enough gold to buy a weapon.";
   } else {
     text.innerText = "You already have the most powerful weapon!";//Create else statement to show commmentary log when you have the "most" powerful weapon
      button2.innerText = "Sell weapon for 15 gold";//Allow players to sell old weapons after acquiring the most powerful one.
-button.onclick = sellWeapon;
+button2.onclick = sellWeapon;
     } //recreate the text.innerText to show the new weapon and add a ""
 }
 //creating an empty location function to take care of goTown and goStore repetions
 function update(location) {
-    monsterStats.style.display = "none";//The monsters stats should no be displayed after defeated using style and display
+    BeAstStats.style.display = "none";//The monsters stats should no be displayed after defeated using style and display
     button1.innerText = location["button text"][0];//use arrays instead of bracket notations "Go to store"
     button2.innerText = location["button text"][1];// change all innerText values into location arrays
     button3.innerText = location["button text"][2];
