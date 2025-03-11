@@ -135,7 +135,7 @@ health: 15,
  health: 60,
 },
 {
-name: "FiRedragon"
+name: "FiRedragon",
 level: 20,
 health: 300,
  }
