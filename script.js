@@ -308,8 +308,12 @@ function easterEgg() {
 } 
 // Create a pick function with a guess parameter
 function pick(guess) {
- const numbers = [];                     //Inside the pick function, a constant variable named numbers is initialized and set to an empty array.
+ const numbers = []; 
+ while(numbers.length < 10) {   //fix while loop
+
+ }                             //Inside the pick function, a constant variable named numbers is initialized and set to an empty array.
 }
+                                        //Create a while loop
 //Another two pick functions called pickTwo and pickEight
 function pickTwo() {
 pick(2)
