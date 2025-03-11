@@ -185,6 +185,12 @@ text: "You are fighting a monster."
         "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
     "button functions": [restart, restart, restart],
     text: "You defeat the FiRedragon! YOU WIN THE GAME! &#x1F389;"
+      }// Add the easter egg in the location array Remember this is confidential
+      {
+        name: "easter egg",
+        "button text": ["2", "8", "Got to town square?"],
+        "button functions": [pickTwo, pickEight, goTown],
+        text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
       }
 ];
  //use string in the key of an object if multiple text need to be shown
@@ -302,7 +308,7 @@ function easterEgg() {
 } 
 // Create a pick function with a guess parameter
 function pick(guess) {
-
+                      //Inside the pick function, a constant variable named numbers is initialized and set to an empty array.
 }
 //Another two pick functions called pickTwo and pickEight
 function pickTwo() {
