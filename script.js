@@ -325,6 +325,9 @@ text.innerText += numbers[i] + \n; //Write the logic to run in the for loop
     text.innerText += "Wrong! You lose 10 health!";
     health -= 10;
     healthText.innerText = health
+    if(health <= 0){
+        lose()
+    } // add if statement that makes user lose if health is equal to or less than 0
   }                   //Punish player for getting wrong set of numbers by lowering their health      //below for loop use the includes method. It checks if an array contains a specific element and returns true or false.       //Create a while loop
 //Another two pick functions called pickTwo and pickEight
 function pickTwo() {
