@@ -308,7 +308,7 @@ function easterEgg() {
 } 
 // Create a pick function with a guess parameter
 function pick(guess) {
-                      //Inside the pick function, a constant variable named numbers is initialized and set to an empty array.
+ const numbers = [];                     //Inside the pick function, a constant variable named numbers is initialized and set to an empty array.
 }
 //Another two pick functions called pickTwo and pickEight
 function pickTwo() {
