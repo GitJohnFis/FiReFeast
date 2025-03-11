@@ -205,7 +205,7 @@ fighting = 0;
 // goFight();
 }
 function fightBeast() {
-fightig = 1;
+fighting = 1;
 }
 //create a sellWeapon function for all weapons after getting the most OP weapon
 function sellWeapon() { //Inside the `if` statement, set `gold` to 15 more than its current value.//- Updated `goldText.innerText` to reflect the new gold amount.
@@ -222,10 +222,10 @@ text.innerText = "Don't sell your only weapon!"
 //Create goFight function to manage monster fight logic.
 function goFight() {
   update(locations[3])           // In the `goFight` function, called the `update` function with the fourth object in the `locations` array as an argument.
-     monsterHealth = monsters[fighting].health;                       //Set the monster health bars to their beast
-     monsterStats.style.display = "block";                                          //Display monster stats when Fight dragon button is clicked.
+  BEaSthealth = monsters[fighting].health;                       //Set the monster health bars to their beast
+     BeAstStats.style.display = "block";                                          //Display monster stats when Fight dragon button is clicked.
       monsterName.innerText =  monsters[fighting].name;                                     //Update the text alongside the new button and style display
-    monsterHealthText.innerText = monsterHealth;
+    monsterHealthText.innerText = BEaSthealth;
     }
 //Create two combat interactive options atk and dodg
 function attack() { //Build attack function to update text message with monster name using the concatenation operator.
@@ -233,15 +233,15 @@ text.innerText = "The " + monsters[fighting].name + "attacks. ";
    text.innerText += " You attack it with your "  + weapon[currentWeaponIndex].name + ".";// On a new line in the `attack` function, used the addition assignment operator (+=) to add the string " You attack it with your <weapon>." to the text value.                                                      //Add a new text message for the weapon you are battling with ie atk 
     health -= getMonsterAttackValue(monsters[fighting].level); //Update health to subtract monster's level. //Your health decreases by the monster's attack value, which is calculated using the monster's level.
     if(isMonsterHit()) {
-    monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * exp) + 1; //Introduce Math object and use random number generation in attack logic.
+      BEaSthealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * exp) + 1; //Introduce Math object and use random number generation in attack logic.
     } else {
         text.innerText += " You miss.";//create an if else statement for any misses you have in a  battle
       }                         //ensures that the monster's health only decreases if the isMonsterHit function returns true.
     healthText.innerText = health;           
-  monsterHealthText.innerText = monsterHealth;                 //Update the innerText of user(s) health and monsters health bar
+  monsterHealthText.innerText = BEaSthealth;                 //Update the innerText of user(s) health and monsters health bar
   if(health <= 0){
 lose()
-  }   else if (monsterHealth <= 0 ){
+  }   else if (BEaSthealth <= 0 ){
 defeatMonster();
 if (fighting === 2) {                             //Make my game complex beyond it's feature-completed amd maek stages fun and engaging give monsters a dynamic attack value.
 winGame();
@@ -255,7 +255,7 @@ defeatMonster();
   }             //To give the weapons durabilty use an if statement to let the weapon break via chance
   if(Math.random() <= .1 && inventory.length !== 1) { //Create the text that shows up when your weapon breaks by chance below //Add a second condition taht precent your only weapon from breaking
 text.innerText += " Your " + inventory.pop() + " breaks."//use the decrement opewrator to show you have one less weapon now
-currenWeaponIndex--;
+currentWeaponIndex--;
   }                                    //Create the lose in a battle function with zero or less health in an if/else statement
 }  //Add else if statement to check monsterHealth and call defeatMonster.
        //Create a new getMonsterAttackValue with parameter to level from monsters
@@ -324,7 +324,7 @@ function pick(guess) {
   } else {
     text.innerText += "Wrong! You lose 10 health!";
     health -= 10;
-    healthText.innerText = health
+    healthText.innerText = health;
     if(health <= 0){
         lose()
     } // add if statement that makes user lose if health is equal to or less than 0
