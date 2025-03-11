@@ -1,5 +1,5 @@
 //console.log("Hello World");
-console.log("Hello World");
+//console.log("Hello World");
    let exp = 0;
    let health = 100;
    let armor = 10;
@@ -11,7 +11,7 @@ console.log("Hello World");
        let inventory = ["stick"]
     //Buttons interaction 
     const button1 = document.querySelector("#button1");
-]   const button2 = document.querySelector("#button2");  
+    const button2 = document.querySelector("#button2");  
     const button3 = document.querySelector("#button3");
     //Create commentary logs for any actions in game
     const text = document.querySelector("#text");
