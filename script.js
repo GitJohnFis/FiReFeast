@@ -297,3 +297,6 @@ function isMonsterHit() {
     return Math.random() > .2 || health < 20; //function isMonsterHit() { return Math.random() > 0.2 || health < 20;}
     
 }
+function easterEgg() {
+    update(locations[7]) //Create a hidden feature or easter egg to my FiReFeast game with easterEgg function
+}
