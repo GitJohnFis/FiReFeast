@@ -185,7 +185,7 @@ text: "You are fighting a monster."
         "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
     "button functions": [restart, restart, restart],
     text: "You defeat the FiRedragon! YOU WIN THE GAME! &#x1F389;"
-      }// Add the easter egg in the location array Remember this is confidential
+      },// Add the easter egg in the location array Remember this is confidential
       {
         name: "easter egg",
         "button text": ["2", "8", "Got to town square?"],
