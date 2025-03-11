@@ -152,7 +152,7 @@ text: "You are in the town square. You see a sign that says \"Store\"." // add t
         {
         name: "store",
         "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],//include the second obk=ject to my locations array
-        "button functions": [buyHealth, buyWeapon, goTown],
+        "button functions": [myHealth, myWeapon, goTown],
         text: "You enter the store."
         },
         {
