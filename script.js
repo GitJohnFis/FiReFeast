@@ -247,8 +247,9 @@ defeatMonster();
 // - Called the `winGame` function if the player is fighting FiRedragon.
 // - Moved the `defeatMonster()` call to the `else` block.
   }             //To give the weapons durabilty use an if statement to let the weapon break via chance
-  if(Math.random() <= .1) {
-    
+  if(Math.random() <= .1) { //Create the text that shows up when your weapon breaks by chance below
+text.innerText += " Your " + inventory.pop() + " breaks."//use the decrement opewrator to show you have one less weapon now
+currenWeaponIndex--;
   }                                    //Create the lose in a battle function with zero or less health in an if/else statement
 }  //Add else if statement to check monsterHealth and call defeatMonster.
        //Create a new getMonsterAttackValue with parameter to level from monsters
