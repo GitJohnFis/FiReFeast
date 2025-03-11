@@ -318,7 +318,9 @@ function pick(guess) {
 text.innerText += numbers[i] + \n; //Write the logic to run in the for loop
   }   
   if(numbers.includes(guess)) {
-
+    text.innerText += "Right! You win 20 gold!";//Add the interactive change to to getting a set of numbers correct
+    gold += 20;
+    goldText.innerText = gold;
   }                          //below for loop use the includes method. It checks if an array contains a specific element and returns true or false.       //Create a while loop
 //Another two pick functions called pickTwo and pickEight
 function pickTwo() {
