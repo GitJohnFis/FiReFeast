@@ -299,4 +299,15 @@ function isMonsterHit() {
 }
 function easterEgg() {
     update(locations[7]) //Create a hidden feature or easter egg to my FiReFeast game with easterEgg function
+} 
+// Create a pick function with a guess parameter
+function pick(guess) {
+
+}
+//Another two pick functions called pickTwo and pickEight
+function pickTwo() {
+pick(2)
+}
+function pickEight() {
+pick(8)
 }
