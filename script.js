@@ -310,9 +310,10 @@ function easterEgg() {
 function pick(guess) {
  const numbers = []; 
  while(numbers.length < 10) {   //fix while loop
-
- }                             //Inside the pick function, a constant variable named numbers is initialized and set to an empty array.
-}
+    numbers.push(Math.floor(Math.random() * 11)) //below the while loop place the text to change in the commentary log
+ } 
+ text.innerText = "You picked " + guess + ". Here are the random numbers:";                            //Inside the pick function, a constant variable named numbers is initialized and set to an empty array.
+}                                //push a random number in between 0 - 10 for my while loop using push metho0
                                         //Create a while loop
 //Another two pick functions called pickTwo and pickEight
 function pickTwo() {
