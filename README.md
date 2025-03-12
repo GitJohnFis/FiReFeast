@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" src="styles.css"/>
+    <meta charset="UTF-8" >
+    <link rel="stylesheet" src="styles.css">
     <title>RPG - FiReFeast Game</title>
 </head>
 <body>
