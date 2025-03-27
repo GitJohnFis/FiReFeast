@@ -1,5 +1,6 @@
 //console.log("Hello World");
 //console.log("Hello World");
+import 'htmx.org';
    let exp = 0;
    let health = 100;
    let armor = 10;
