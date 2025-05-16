@@ -45,9 +45,9 @@
 |     1| JavaScript| Language        |  |
 |     2| Python    | Language        |     ```python print(f"Hello,World!")```              |
 |     3| W.K armor      |  Gain a 2nd set of armor      | ```var WhiteKnightArmor = armor + currArmor;```       |
-|     4| D&D weaponry       |  Dragon based tools  |  ```let inventory = [];```     |
-|     5| Multi hit       | Chance of weaker spread DMG      |  ```isMonsterHit() { Math.random() > .2 || health < 20; } ```     |
-|     6| Revive       |  Now restart your HP with prev XP         | ``` exp = 0; health = 100;gold = 50;armor = 10; currentWeaponIndex = 0; inventory = ["stick"]; goTown()} |  
+|     4| D&D weaponry       |  Dragon based tools  |  ```let inventory = [];```   |
+|     5| Multi hit       | Chance of weaker spread DMG      |  ```isMonsterHit() { Math.random() > .2 || health < 20; } ```  |
+|     6| Revive       |  Now restart your HP with prev XP         | ``` exp = 0; health = 100;gold = 50;armor = 10; currentWeaponIndex = 0; inventory = ["stick"]; goTown()}``` |  
 |     7| Repuation sys       | Dont lose the peoples opinion   |  NIL   |
 |     8| Money glitch       |  Gain advantage after misclicking   | ``` while(numbers.length < 10) { numbers.push(Math.floor(Math.random() * 11)) }```  |
 |     9| 4+ arcs       |  More locations with diff beasts        |  ```update(locations[0])``` |
