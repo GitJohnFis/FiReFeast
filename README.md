@@ -41,17 +41,17 @@
 <details open>
 <summary>My Game Mechanics</summary>
 
-| Rank | Features |
-|-----:|-----------|
-|     1| JavaScript|
-|     2| Python    |
-|     3| W.K armor      |
-|     4| D&D weaponry       |
-|     5| Multi hit       |
-|     6| Revive       |
-|     7| Repuation sys       |
-|     8| Money glitch       |
-|     9| 4+ arcs       |
+| Rank | Features  |3rd Details |
+|-----:|-----------|-----------|
+|     1| JavaScript|           |
+|     2| Python    |            |
+|     3| W.K armor      |        |
+|     4| D&D weaponry       |    |
+|     5| Multi hit       |       |
+|     6| Revive       |           |   
+|     7| Repuation sys       |    |
+|     8| Money glitch       |     |
+|     9| 4+ arcs       |          |
 
 </details>
 
