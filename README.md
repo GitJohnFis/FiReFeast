@@ -39,7 +39,7 @@
 
 
 <details open>
-<summary>My top languages</summary>
+<summary>My Game Mechanics</summary>
 
 | Rank | Features |
 |-----:|-----------|
