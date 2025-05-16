@@ -38,7 +38,7 @@
 
 
 <details open>
-<summary>My Game Mechanics</summary>
+<summary>FRF Game Mechanics</summary>
 
 | Rank | Features  |More+ Details |
 |-----:|-----------|-----------|
