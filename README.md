@@ -43,12 +43,9 @@
 | Rank | Features  |More+ Details |Psuedocode |
 |-----:|-----------|-----------|-----------|
 |     1| JavaScript| Language        |  |
-|     2| Python    | Language        |     ```python
-`print(f"Hello,World!")
-```              
-|
-|     3| W.K armor      |  Gain a 2nd set of armor      | `var WhiteKnightArmor = armor + currArmor;       |
-|     4| D&D weaponry       |  Dragon based tools  |                 |
+|     2| Python    | Language        |     ```python print(f"Hello,World!")```              |
+|     3| W.K armor      |  Gain a 2nd set of armor      | ```var WhiteKnightArmor = armor + currArmor;```       |
+|     4| D&D weaponry       |  Dragon based tools  |  ```let inventory = [];```     |
 |     5| Multi hit       | Chance of weaker spread DMG      |        |
 |     6| Revive       |  Now restart your HP with prev XP         |  |  
 |     7| Repuation sys       | Dont lose the peoples opinion   |     |
