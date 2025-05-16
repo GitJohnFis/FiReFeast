@@ -36,3 +36,25 @@
  <source media="(prefers-color-scheme: light)" srcset="YOUR-LIGHTMODE-IMAGE">
  <img alt="YOUR-ALT-TEXT" src="YOUR-DEFAULT-IMAGE">
 </picture>
+
+
+<details open>
+<summary>My top languages</summary>
+
+| Rank | Languages |
+|-----:|-----------|
+|     1| JavaScript|
+|     2| Python    |
+|     3| SQL       |
+|     4| SQL       |
+|     5| SQL       |
+|     6| SQL       |
+|     7| SQL       |
+|     8| SQL       |
+|     9| SQL       |
+
+</details>
+---
+> Let their blood rain from the sky!
+
+— Profion 
