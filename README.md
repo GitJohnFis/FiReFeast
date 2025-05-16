@@ -41,7 +41,7 @@
 <details open>
 <summary>My Game Mechanics</summary>
 
-| Rank | Features  |3rd Details |
+| Rank | Features  |More+ Details |
 |-----:|-----------|-----------|
 |     1| JavaScript| Language        |
 |     2| Python    | Language        |
