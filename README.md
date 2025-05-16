@@ -43,15 +43,15 @@
 
 | Rank | Features  |3rd Details |
 |-----:|-----------|-----------|
-|     1| JavaScript|           |
-|     2| Python    |            |
-|     3| W.K armor      |        |
-|     4| D&D weaponry       |    |
-|     5| Multi hit       |       |
-|     6| Revive       |           |   
-|     7| Repuation sys       |    |
-|     8| Money glitch       |     |
-|     9| 4+ arcs       |          |
+|     1| JavaScript| Language        |
+|     2| Python    | Language        |
+|     3| W.K armor      |  Gain a 2nd set of armor      |
+|     4| D&D weaponry       |  Dragon based tools  |
+|     5| Multi hit       | Chance of weaker spread DMG      |
+|     6| Revive       |  Now restart your HP with prev XP         |   
+|     7| Repuation sys       | Dont lose the peoples opinion   |
+|     8| Money glitch       |  Gain advantage after misclicking   |
+|     9| 4+ arcs       |  More locations with diff beasts        |
 
 </details>
 
