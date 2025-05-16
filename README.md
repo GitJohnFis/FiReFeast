@@ -41,17 +41,17 @@
 <details open>
 <summary>My top languages</summary>
 
-| Rank | Languages |
+| Rank | Features |
 |-----:|-----------|
 |     1| JavaScript|
 |     2| Python    |
-|     3| SQL       |
-|     4| SQL       |
-|     5| SQL       |
-|     6| SQL       |
-|     7| SQL       |
-|     8| SQL       |
-|     9| SQL       |
+|     3| W.K armor      |
+|     4| D&D weaponry       |
+|     5| Multi hit       |
+|     6| Revive       |
+|     7| Repuation sys       |
+|     8| Money glitch       |
+|     9| 4+ arcs       |
 
 </details>
 ---
