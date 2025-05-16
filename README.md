@@ -40,17 +40,17 @@
 <details open>
 <summary>FRF Game Mechanics</summary>
 
-| Rank | Features  |More+ Details |
-|-----:|-----------|-----------|
-|     1| JavaScript| Language        |
-|     2| Python    | Language        |
-|     3| W.K armor      |  Gain a 2nd set of armor      |
-|     4| D&D weaponry       |  Dragon based tools  |
-|     5| Multi hit       | Chance of weaker spread DMG      |
-|     6| Revive       |  Now restart your HP with prev XP         |   
-|     7| Repuation sys       | Dont lose the peoples opinion   |
-|     8| Money glitch       |  Gain advantage after misclicking   |
-|     9| 4+ arcs       |  More locations with diff beasts        |
+| Rank | Features  |More+ Details |Psuedocode |
+|-----:|-----------|-----------|-----------|
+|     1| JavaScript| Language        |  |
+|     2| Python    | Language        |     ```python  `print(f"Hello,World!")```               |
+|     3| W.K armor      |  Gain a 2nd set of armor      | `var WhiteKnightArmor = armor + currArmor;       |
+|     4| D&D weaponry       |  Dragon based tools  |                 |
+|     5| Multi hit       | Chance of weaker spread DMG      |        |
+|     6| Revive       |  Now restart your HP with prev XP         |  |  
+|     7| Repuation sys       | Dont lose the peoples opinion   |     |
+|     8| Money glitch       |  Gain advantage after misclicking   |  |
+|     9| 4+ arcs       |  More locations with diff beasts        |   |
 
 </details>
 
