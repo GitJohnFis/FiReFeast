@@ -42,7 +42,7 @@
 
 | Rank | Features  |More+ Details |Psuedocode |
 |-----:|-----------|-----------|-----------|
-|     1| JavaScript| Language        |  |
+|     1| JavaScript| Language        | ```javascript console.log("It works! Trust me.")``` |
 |     2| Python    | Language        |     ```python print(f"Hello,World!")```              |
 |     3| W.K armor      |  Gain a secondary armor set  | ```var WhiteKnightArmor = armor + currArmor;```       |
 |     4| D&D weaponry       |  Dragon based tools  |  ```let inventory = [];```   |
