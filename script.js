@@ -226,7 +226,7 @@ function goFight() {
   BEaSthealth = monsters[fighting].health;                       //Set the monster health bars to their beast
      BeAstStats.style.display = "block";                                          //Display monster stats when Fight dragon button is clicked.
       monsterName.innerText =  monsters[fighting].name;                                     //Update the text alongside the new button and style display
-    monsterHealthText.innerText = BEaSthealth;
+    monsterHealthText.innerText = monsterHealth;
     }
 //Create two combat interactive options atk and dodg
 function attack() { //Build attack function to update text message with monster name using the concatenation operator.
@@ -239,7 +239,7 @@ text.innerText = "The " + monsters[fighting].name + "attacks. ";
         text.innerText += " You miss.";//create an if else statement for any misses you have in a  battle
       }                         //ensures that the monster's health only decreases if the isMonsterHit function returns true.
     healthText.innerText = health;           
-  monsterHealthText.innerText = BEaSthealth;                 //Update the innerText of user(s) health and monsters health bar
+  monsterHealthText.innerText = monsterHealth;                 //Update the innerText of user(s) health and monsters health bar
   if(health <= 0){
 lose()
   }   else if (BEaSthealth <= 0 ){
