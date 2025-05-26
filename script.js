@@ -20,7 +20,7 @@ import 'htmx.org';
     const healthText = document.querySelector("#healthText");
     const armorText = document.querySelector("#armorText")
     const goldText = document.querySelector("#goldText");
-    const BeAstStats = document.querySelector("#BeAstStats");
+    const BeAstStats = document.querySelector("#BeAstStats") || document.querySelector("#monsterStats") ;
     const monsterName = document.querySelector("#monsterName");
     const monsterHealthText = document.querySelector("#monsterHealthText")
     //Create an interaction function that lets user "Go to store"
