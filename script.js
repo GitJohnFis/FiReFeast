@@ -415,7 +415,7 @@ function buyArmor() {
 }
 
 function buyWeapon() {
-  if (currentWeapon < weapons.length - 1) {
+  if (currentWeaponIndex < weapons.length - 1) { //patched weapons being pushed not func
     if (gold >= 30) {
       gold -= 30;
       currentWeapon++;
