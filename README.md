@@ -37,7 +37,8 @@
 </picture>
 
 --- 
-<img src=https://github.com/user-attachments/assets/2047d8af-207f-482b-9435-2fc9202f1f2d style='width: 200px;' /> --- <img alt='OriginalBandito' src=https://github.com/user-attachments/assets/ec4886f6-c05d-442a-94fc-7afaefd93ca3 style='width: 200px;' />
+<img src=https://github.com/user-attachments/assets/2047d8af-207f-482b-9435-2fc9202f1f2d style='width: 200px;' /> --- <img alt='OriginalBandito' src=https://github.com/user-attachments/assets/578eed73-4eaf-438e-ad9a-c745b6bef3da style='width: 200px;' />
+
 
 
 
