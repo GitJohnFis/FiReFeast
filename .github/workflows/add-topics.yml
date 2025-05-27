@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Update Topics
-        uses: actions/github-script@v7.1.0
+        uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
