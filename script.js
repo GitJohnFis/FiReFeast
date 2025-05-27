@@ -338,7 +338,47 @@ pick(2)
 function pickEight() {
 pick(8)
 }
+//===GAME SAVE CONTROLS===
+document.getElementById('saveBtn').onclick = () => {
+try {
+   const state = {
+     exp,
+      health,
+      gold,
+      armor,
+      currentWeaponIndex,
+      inventory,
+// Add more UI elements here + other vars to save
+};
+   saveGame(state);
+   alert('Game Saved!')
+}
+} catch (error) {
+    console.error("Save failed:", error);
+    alert("An error occurred while saving your game. Please try again.");
+  }
+}
 
+document.getElementById('loadBtn').onclick = () => {
+try {
+   const state = loadGame();
+  if (state) {
+    exp = state.exp;
+    health = state.health;
+    gold = state.gold;
+    armor = state.armor;
+    currentWeaponIndex = state.currentWeaponIndex;
+    inventory = state.inventory;
+    // ===update more UI elements here!===
+    alert("Game loaded!");
+  } else {
+    alert("No saved game found!");
+  }
+} catch (error) {
+    console.error("Load failed:", error);
+    alert("An error occurred while loading your game. Please try again.");
+  }
+};
 //New revive function for when you lose with vengeance and 150 gold
 /*{
     name: "lose",
