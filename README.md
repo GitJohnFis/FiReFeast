@@ -63,3 +63,27 @@
 > Let their blood rain from the sky!
 
 — Profion 
+```mermaid
+flowchart TD
+    User[User Browser]
+    User --> UI[HTML Game UI]
+    UI --> CSS[CSS Styling]
+    UI --> JS[JavaScript Game Logic]
+    UI --> Assets[Assets/Images]
+    JS --> Stats[Player Stats: EXP, Health, Armor, Gold]
+    JS --> Controls[UI Controls: Buttons, Inputs]
+    JS --> Combat[Combat System]
+    JS --> Inventory[Inventory System]
+    JS --> Locations[Locations: Town, Store, Cave]
+    JS --> Monsters[Monsters/Beasts]
+    Combat --> Monsters
+    Combat --> Stats
+    Combat --> Inventory
+    Inventory --> Assets
+    Locations --> Monsters
+    Locations --> Assets
+    Monsters --> Loot[Gold/Items Drop]
+    Loot --> Inventory
+    Loot --> Stats
+    Controls --> JS
+```
