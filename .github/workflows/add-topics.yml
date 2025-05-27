@@ -1,8 +1,8 @@
 name: Add Topics to Repo
 
 on:
-  workflow_dispatch: 
-# manual trigger
+  workflow_dispatch: #manualy trigger
+
 jobs:
   add-topics:
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
               "singleplayer",
               "role-playing-game"
             ];
-            await github.request('PATCH /repos/{owner}/{repo}/tree/main/topics', {
+            await github.request('PATCH /repos/{owner}/{repo}/topics', {
               owner: context.repo.owner,
               repo: context.repo.repo,
               names: topics,
