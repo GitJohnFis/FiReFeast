@@ -63,3 +63,60 @@
 > Let their blood rain from the sky!
 
 — Profion 
+
+
+
+
+
+
+<!--
+```mermaid
+flowchart TD
+  %% Main User Node
+  user([<i class="fas fa-user"></i> User<br/>(Browser)])
+  style user fill:#f0e68c,stroke:#b8860b,stroke-width:2px
+
+  %% Frontend Layer
+  subgraph Frontend [ "Frontend (Client-side)" ]
+    direction LR
+    htmlFile[<b>HTML</b><br/>(Game UI)]
+    cssFile[<b>CSS</b><br/>(Styling)]
+    jsFile[<b>JavaScript</b><br/>(Game Logic)]
+    assets[<b>Assets</b><br/>(Images, etc.)]
+  end
+  style Frontend fill:#e6f7ff,stroke:#0099cc,stroke-width:2px
+
+  %% Game Mechanics
+  subgraph Mechanics [ "Game Mechanics" ]
+    direction TB
+    stats[<b>Stats</b><br/>EXP, Health, Armor, Gold]
+    locations[<b>Locations</b><br/>Store, Cave, Town]
+    monsters[<b>BeAst/Monsters</b>]
+    features[<b>Features</b><br/>Revive, Multi-hit, etc.]
+  end
+  style Mechanics fill:#fffbe6,stroke:#ffd700,stroke-width:2px
+-->
+ <!-- %% Connections
+  user -> htmlFile
+  htmlFile -> cssFile
+  htmlFile -> jsFile
+  htmlFile -> assets
+  jsFile -> assets
+  jsFile -> stats
+  jsFile -> locations
+  jsFile -> monsters
+  jsFile -> features
+
+  %% Descriptions
+  classDef highlight fill:#ffd0d0,stroke:#e57373,stroke-width:2px;
+  stats,locations,monsters,features,assets,jsFile,cssFile,htmlFile class:highlight
+  %% Legend
+  subgraph Legend [ "Legend" ]
+    direction LR
+    L1[<b>Yellow</b>: User/Entry Point]
+    L2[<b>Blue</b>: Frontend Files]
+    L3[<b>Gold</b>: Game Mechanics]
+    L4[<b>Red</b>: Key Modules]
+  end
+  style Legend fill:#fff,stroke:#aaa,stroke-dasharray: 5 5
+-->
