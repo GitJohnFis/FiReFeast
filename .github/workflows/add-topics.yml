@@ -1,7 +1,7 @@
 name: Add Topics
 
 on:
-  workflow_dispatch: #manually trigger bc GitHub
+  workflow_dispatch: # Manually trigger via GitHub
 
 jobs:
   add-topics:
@@ -27,5 +27,5 @@ jobs:
                 "singleplayer",
                 "role-playing-game"
               ],
-              headers: { 'Accept': 'application/vnd.github+json' }
+              headers: { 'Accept': 'application/vnd.github.mercy-preview+json' }
             });
