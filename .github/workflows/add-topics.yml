@@ -1,8 +1,8 @@
 name: Add Topics to Repo
 
 on:
-  workflow_dispatch:  // manual trigger
-
+  workflow_dispatch: 
+# manual trigger
 jobs:
   add-topics:
     runs-on: ubuntu-latest
