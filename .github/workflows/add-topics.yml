@@ -25,7 +25,7 @@ jobs:
               "singleplayer",
               "role-playing-game"
             ];
-            await github.request('PATCH /repos/{owner}/{repo}/topics', {
+            await github.request('PATCH /repos/{owner}/{repo}/tree/main/topics', {
               owner: context.repo.owner,
               repo: context.repo.repo,
               names: topics,
