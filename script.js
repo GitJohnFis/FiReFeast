@@ -1,6 +1,7 @@
 //console.log("Hello World");
 //console.log("Hello World");
 import 'htmx.org';
+import { saveGame, loadGame } from './fireFeastSave.js';
    let exp = 0;
    let health = 100;
    let armor = 10;
@@ -337,6 +338,7 @@ pick(2)
 function pickEight() {
 pick(8)
 }
+
 //New revive function for when you lose with vengeance and 150 gold
 /*{
     name: "lose",
