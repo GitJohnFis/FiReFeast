@@ -25,3 +25,15 @@
 |   Assets/Images     |
 +---------------------+
 -->
+
+```mermaid
+flowchart TD
+    User --> HTML
+    HTML --> CSS
+    HTML --> JavaScript
+    HTML --> Assets
+    JavaScript --> Stats
+    JavaScript --> Locations
+    JavaScript --> Monsters
+    JavaScript --> Features
+```
