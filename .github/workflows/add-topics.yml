@@ -1,7 +1,7 @@
-name: Change Repository Topics
+name: Update Repository Topics
 
 on:
-  workflow_dispatch: #Manually trigger via GitHub
+  workflow_dispatch:
     inputs:
       topics:
         description: 'Comma-separated list of topics to add'
@@ -18,14 +18,26 @@ jobs:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
             try {
-              const topics = inputs.topics.split(',').map(t => t.trim());
-              await github.request('PATCH /repos/{owner}/{repo}/topics', {
+              if (!inputs.topics || !inputs.topics.trim()) {
+                core.setFailed("No topics provided.");
+                return;
+              }
+              const topics = inputs.topics.split(',').map(t => t.trim()).filter(Boolean);
+              if (!topics.length) {
+                core.setFailed("Topics list is empty after parsing.");
+                return;
+              }
+              const response = await github.request('PATCH /repos/{owner}/{repo}/topics', {
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 names: topics,
                 headers: { 'Accept': 'application/vnd.github+json' }
               });
-              console.log('Successfully updated topics:', topics);
+              if (response.status === 200) {
+                console.log('Successfully updated topics:', topics);
+              } else {
+                core.setFailed(`Unexpected response status: ${response.status}`);
+              }
             } catch (error) {
               core.setFailed(`Failed to update topics: ${error.message}`);
             }
