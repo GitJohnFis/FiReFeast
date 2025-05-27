@@ -1,0 +1,36 @@
+name: Add Topics to Repo
+
+on:
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  add-topics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add topics via GitHub API
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const topics = [
+              "rpg",
+              "javascript",
+              "game",
+              "text-adventure",
+              "browser-game",
+              "html",
+              "css",
+              "interactive-fiction",
+              "adventure",
+              "singleplayer",
+              "role-playing-game"
+            ];
+            await github.request('PATCH /repos/{owner}/{repo}/topics', {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              names: topics,
+              headers: {
+                'Accept': 'application/vnd.github+json'
+              }
+            });
+            console.log("Topics added/updated:", topics);
