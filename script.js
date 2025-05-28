@@ -9,14 +9,100 @@ import 'htmx.org';
     //undeclared variable 
       let fighting;
       let BEaSthealth;
-       let inventory = ["stick"]
-let achievements = [];
-let quests = [
-   {
-      name: 'Defeat the FiRedragon', 
-      complete: false
+      let inventory = ["stick"]
+      // =====Achievements & Quests System=====
+      const progressData = {
+         achievementsByCategory: {
+            Progression: [
+               { key: "completeTutorial", name: "Complete the Tutorial", description: "Successfully finish the game's tutorial." },
+               { key: "firstVictory", name: "First Victory", description: "Win your first battle against a FiRedragon." },
+               { key: "level10", name: "Level Up (10)", description: "Reach level 10." },
+               { key: "level20", name: "Level Up (20)", description: "Reach level 20." }
+            ],
+            Story: [
+               { key: "heroOfTown", name: "Hero of the Town", description: "Save the town from the FiRedragon." },
+               { key: "mysterySolver", name: "Mystery Solver", description: "Uncover the hidden secrets of the cave." }
+            ],
+            Collections: [
+               { key: "treasureHunter", name: "Treasure Hunter", description: "Collect 100 gold coins." },
+               { key: "armorCollector", name: "Armor Collector", description: "Acquire all types of armor available in the game." }
+            ],
+            Challenge: [
+                { key: "speedRunner", name: "Speed Runner", description: "Complete a quest in under 5 minutes." },
+                { key: "survivor", name: "Survivor", description: "Defeat a FiRedragon without losing any health." }
+            ],
+            Special: [
+               { key: "masterStrategist", name: "Master Strategist", description: "Win a battle using only strategic moves." },
+               { key: "ultimateWarrior", name: "Ultimate Warrior", description: "Max out all stats (EXP, Health, Armor, Gold)." }
+            ],
+         },
+         quests: [
+         { key: , name: '', completed: false}
+         ]
+      };
+
+const allAchievements = Object.values(progressData.achievementByCategory).flat();
+const allQuests = progressData.quests;
+      let unlockedAchievements = [];
+      let CompletedQuests = [];
+
+// Unlock an achievement by Obj.key
+function unlockAchievementOrQuestByKey(key) {
+// initain=l achievement check
+   if(!unlockedAchievments.includes(key)) {
+   const achievement = allAchievements.find(a => a.key === key);
+      if (achievement) {
+      unlockedAchievements.push(key);
+      text.innerText += `\n🏆 Achievement Unlocked: ${achievement.name} - ${achievement.description}`;
+      updateProgressUI();
+      return;
+      }
    }
-]
+// secondly check quests
+if (!completedQuests.includes(key)) {
+const quest = allQuests.find(q => q.key === key);
+    if (quest && !quest.complete) {
+      quest.complete = true;
+      completedQuests.push(key);
+      text.innerText += `\n🗺️ Quest Complete: ${quest.name}!`;
+      updateProgressUI();
+    }
+  }
+}
+
+function updateProgressUI() {
+  // Achievements
+  const achDiv = document.querySelector("#achievements");
+  if (achDiv) {
+    achDiv.innerHTML = `<b>Achievements:</b>` + 
+      Object.entries(progressData.achievementsByCategory).map(([category, list]) => `
+        <div class="mt-4">
+          <h3 class="font-bold text-lg text-yellow-300">${category}</h3>
+          <ul class="list-disc pl-5">
+            ${list.map(a => `
+              <li class="${unlockedAchievements.includes(a.key) ? 'text-green-400' : 'text-gray-500'}">
+                <span class="font-semibold">${a.name}</span> 
+                <span class="italic">- ${a.description}</span>
+                ${unlockedAchievements.includes(a.key) ? '✅' : ''}
+              </li>
+            `).join("")}
+          </ul>
+        </div>
+      `).join("");
+  }
+  // Quests
+  const questDiv = document.querySelector("#quests");
+  if (questDiv) {
+    questDiv.innerHTML = "<b>Quests:</b><ul>" +
+      allQuests.map(q => `<li class="${q.complete ? 'text-green-400' : 'text-gray-500'}">${q.name}: <b>${q.complete ? "✅" : "❌"}</b></li>`).join("") +
+      "</ul>";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", updateProgressUI);
+
+
+     // =====END Achievements & Quests System=====
     //Buttons interaction 
     const button1 = document.querySelector("#button1");
     const button2 = document.querySelector("#button2");  
@@ -324,25 +410,25 @@ function restart() {
 }
 
 // --- ACHIEVEMENTS / QUESTS ---
-function unlcockAchievements(name) {
-if(!achivements.includes(name)) {
-achievements.push(name)
-text.innerText += ` Achievement unlocked: ${name}!`;
-   // More updates for achievements UI here
-   updateAchievementsUI()
-}
+// function unlcockAchievements(name) {
+// if(!achivements.includes(name)) {
+// achievements.push(name)
+// text.innerText += ` Achievement unlocked: ${name}!`;
+//    // More updates for achievements UI here
+//    updateAchievementsUI()
+// }
    
-}
+// }
 
-function completeQuests() {
-const quest = quest.find(m => m.name  === name);
-   if (quest && !quest.complete) {
-   quest.complete = true;
-   text.innerText += ` Quest complete: ${name}!`;
-    // Optionally update quests UI here
-      updateQuestsUI()
-   }
-}
+// function completeQuests() {
+// const quest = quest.find(m => m.name  === name);
+//    if (quest && !quest.complete) {
+//    quest.complete = true;
+//    text.innerText += ` Quest complete: ${name}!`;
+//     // Optionally update quests UI here
+//       updateQuestsUI()
+//    }
+// }
 
 //Create a isMonsterHit function to determine if the monster is hit. complex detail: Math.random() generates a random number between 0 and 1.
 // If this number is greater than 0.2, the function returns true (indicating a hit).
