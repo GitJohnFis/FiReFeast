@@ -10,6 +10,13 @@ import 'htmx.org';
       let fighting;
       let BEaSthealth;
        let inventory = ["stick"]
+let achievements = [];
+let quests = [
+   {
+      name: 'Defeat the FiRedragon', 
+      complete: false
+   }
+]
     //Buttons interaction 
     const button1 = document.querySelector("#button1");
     const button2 = document.querySelector("#button2");  
@@ -295,8 +302,31 @@ function restart() {
     healthText.innerText = health;
     armorText.innerText = armor;
     expText.innerText = exp;
+    achievements = [];
+    quests.forEach(q => q.complete = false);
+    updateStats();
     goTown()
 }
+
+// --- ACHIEVEMENTS / QUESTS ---
+function unlcockAchievements(name) {
+if(!achivements.includes(name)) {
+achievements.push(name)
+text.innerText += ` Achievement unlocked: ${name}!`;
+   // More updates for achievements UI here
+}
+   
+}
+
+function completeQuests() {
+const quest = quest.find(m => m.name  === name);
+   if (quest && !quest.complete) {
+   quest.complete = true;
+   text.innerText += ` Quest complete: ${name}!`;
+    // Optionally update quests UI here
+   }
+}
+
 //Create a isMonsterHit function to determine if the monster is hit. complex detail: Math.random() generates a random number between 0 and 1.
 // If this number is greater than 0.2, the function returns true (indicating a hit).
 // Otherwise, it returns false (indicating a miss).
