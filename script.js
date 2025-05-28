@@ -23,7 +23,7 @@ import 'htmx.org';
                { key: "heroOfTown", name: "Hero of the Town", description: "Save the town from the FiRedragon." },
                { key: "mysterySolver", name: "Mystery Solver", description: "Uncover the hidden secrets of the cave." }
             ],
-            Collections: [
+            Collection: [
                { key: "treasureHunter", name: "Treasure Hunter", description: "Collect 100 gold coins." },
                { key: "armorCollector", name: "Armor Collector", description: "Acquire all types of armor available in the game." }
             ],
@@ -37,7 +37,9 @@ import 'htmx.org';
             ],
          },
          quests: [
-         { key: , name: '', completed: false}
+         { key: "defeatFiRedragon", name: "Defeat the FiRedragon", complete: false },
+         { key: "findCaveSecret", name: "Find the Cave Secret", complete: false }
+            //Add more quests here
          ]
       };
 
@@ -117,20 +119,20 @@ document.addEventListener("DOMContentLoaded", updateProgressUI);
     const monsterName = document.querySelector("#monsterName");
     const monsterHealthText = document.querySelector("#monsterHealthText")
     //New quest feature update to UI
-   function updateAchievementsUI() {
-      const achDiv = document.querySelector("#achievements");
-      if (!achDiv) return;
-      achDiv.innerHTML = "<b>Achievements:</b> " +
-    (achievements.length ? achievements.join(", ") : "None yet!");
-     }
+//    function updateAchievementsUI() {
+//       const achDiv = document.querySelector("#achievements");
+//       if (!achDiv) return;
+//       achDiv.innerHTML = "<b>Achievements:</b> " +
+//     (achievements.length ? achievements.join(", ") : "None yet!");
+//      }
 
-  function updateQuestsUI() {
-  const questDiv = document.querySelector("#quests");
-  if (!questDiv) return;
-  questDiv.innerHTML = "<b>Quests:</b><ul>" +
-    quests.map(q => `<li>${q.name}: <b>${q.complete ? "✅" : "❌"}</b></li>`).join("") +
-    "</ul>";
-}
+//   function updateQuestsUI() {
+//   const questDiv = document.querySelector("#quests");
+//   if (!questDiv) return;
+//   questDiv.innerHTML = "<b>Quests:</b><ul>" +
+//     quests.map(q => `<li>${q.name}: <b>${q.complete ? "✅" : "❌"}</b></li>`).join("") +
+//     "</ul>";
+// }
     //Create an interaction function that lets user "Go to store"
     function goTown() { 
         update(locations[0]);
@@ -186,10 +188,17 @@ function myWeapon() {   // create function to take the actions that happen in "s
   goldText.innerText = gold;
   let newWeapon = weapons[currentWeaponIndex].name;//use the dot notation for new weapon
   text.innerText = "You now have a " + newWeapon + "."  //create the commentary log when you purchase a new weapon from store
-  inventory.push(myWeapon); //show the log commentary of the new equipped weapon
+  inventory.push(newWeapon); //show the log commentary of the new equipped weapon
   text.innerText += " In your inventory you have: " + inventory//after the updated innerText for the new weapon log commentary include the inventory text using a second innerText with +=
                                                                 //add the inventory operation by concatinating
-    }                                                              // add an else statement if the gold you have is insufficient 
+    // Achievement check: do we now have all weapons?
+      if (
+        inventory.includes("stick") &&
+        inventory.includes("dagger") &&
+        inventory.includes("claw hammer") &&
+        inventory.includes("sword")
+      ) unlockAchievementOrQuestByKey("armorCollector");
+    }                                                              // add an else statement if the gold you have is insufficient       
     else {
 text.innerText = "You do not have enough gold to buy a weapon.";
     }
@@ -348,13 +357,29 @@ text.innerText = "The " + monsters[fighting].name + "attacks. ";
       }                         //ensures that the monster's health only decreases if the isMonsterHit function returns true.
     healthText.innerText = health;           
   monsterHealthText.innerText = monsterHealth;                 //Update the innerText of user(s) health and monsters health bar
+   // ===PROGRESS LOGIC (Achievements & Quests)===
+
+if (exp >= 10) unlockAchievementOrQuestByKey('level10');
+   if (exp >= 20) unlockAchievementOrQuestByKey('level20');
+   if (exp >= 100) unlockAchievementOrQuestByKey('treasuredHunter');
+   if (inventory.includes("stick") && inventory.includes("dagger") && inventory.includes("claw hammer") && inventory.includes("sword"))
+    unlockAchievementOrQuestByKey("armorCollector");
+  if (monsters[fighting].name === "FiRedragon" && health === 100) unlockAchievementOrQuestByKey("survivor");
+   
   if(health <= 0){
 lose()
   }   else if (BEaSthealth <= 0 ){
 defeatMonster();
-if (fighting === 2) {                             //Make my game complex beyond it's feature-completed amd maek stages fun and engaging give monsters a dynamic attack value.
-winGame();
-} else{
+if (fighting === 2) {
+   //Survivor achieved or FLAWLESS WIN
+    if (monsters[fighting].name === "FiRedragon" && health === 100)
+       unlockAchievementOrQuestByKey("survivor");
+   
+      unlockAchievementOrQuestByKey("firstVictory");
+      unlockAchievementOrQuestByKey("heroOfTown");
+      unlockAchievementOrQuestByKey("defeatFiRedragon");
+      winGame();
+    } else {
 defeatMonster();
 }
 // Inside the `else if` block of the `attack` function, created an `if` and `else` statement.
@@ -403,9 +428,11 @@ function restart() {
     healthText.innerText = health;
     armorText.innerText = armor;
     expText.innerText = exp;
-    achievements = [];
-    quests.forEach(q => q.complete = false);
-    updateStats();
+    unlockedAchievements = [];
+    completedQuests = [];
+    progressData.quests.forEach(q => q.complete = false);
+    updateProgressUI();
+    // updateStats();
     goTown()
 }
 
