@@ -30,6 +30,21 @@ let quests = [
     const BeAstStats = document.querySelector("#BeAstStats") || document.querySelector("#monsterStats") ;
     const monsterName = document.querySelector("#monsterName");
     const monsterHealthText = document.querySelector("#monsterHealthText")
+    //New quest feature update to UI
+   function updateAchievementsUI() {
+      const achDiv = document.querySelector("#achievements");
+      if (!achDiv) return;
+      achDiv.innerHTML = "<b>Achievements:</b> " +
+    (achievements.length ? achievements.join(", ") : "None yet!");
+     }
+
+  function updateQuestsUI() {
+  const questDiv = document.querySelector("#quests");
+  if (!questDiv) return;
+  questDiv.innerHTML = "<b>Quests:</b><ul>" +
+    quests.map(q => `<li>${q.name}: <b>${q.complete ? "✅" : "❌"}</b></li>`).join("") +
+    "</ul>";
+}
     //Create an interaction function that lets user "Go to store"
     function goTown() { 
         update(locations[0]);
@@ -283,7 +298,7 @@ gold += Math.floor(monsters[fighting].level * 6.7) + 1;
    expText.innerText = exp;                                       //Update the values to be displayed now on screen using innerText
    update(locations[4]);                        //Complete defeatMonster function by calling update with locations[4].<--This does notexist, yet
 }
-function lose() {//Working on th lsoe function make the In the lose function, call the update function and pass in the non existent sixth object of locations array.
+function lose() {//Working on th lose function make the In the lose function, call the update function and pass in the non existent sixth object of locations array.
 update(locations[5]);
 }
 //Below the lose function create the winGame functiuon
@@ -314,6 +329,7 @@ if(!achivements.includes(name)) {
 achievements.push(name)
 text.innerText += ` Achievement unlocked: ${name}!`;
    // More updates for achievements UI here
+   updateAchievementsUI()
 }
    
 }
@@ -324,6 +340,7 @@ const quest = quest.find(m => m.name  === name);
    quest.complete = true;
    text.innerText += ` Quest complete: ${name}!`;
     // Optionally update quests UI here
+      updateQuestsUI()
    }
 }
 
