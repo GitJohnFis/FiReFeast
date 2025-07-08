@@ -4,12 +4,12 @@ import 'htmx.org';
    let exp = 0;
    let health = 100;
    let armor = 10;
-    let gold = 50; //Update gold amount to 650 for testing buyWeapon function. then buy all weapos on preview
+    let gold = 50; //Update gold amount to 650 for testing buyWeapon function. then buy all weapons on preview
    let currentWeaponIndex = 0;
     //undeclared variable 
       let fighting;
-      let BEaSthealth;
-      let inventory = ["stick"]
+      let beastHealth;
+      let inventory = ["stick"];
       // =====Achievements & Quests System=====
       const progressData = {
          achievementsByCategory: {
@@ -37,19 +37,19 @@ import 'htmx.org';
             ],
          },
          quests: [
-         { key: , name: '', completed: false}
+         { key: "", name: '', completed: false}
          ]
       };
 
 const allAchievements = Object.values(progressData.achievementByCategory).flat();
 const allQuests = progressData.quests;
       let unlockedAchievements = [];
-      let CompletedQuests = [];
+      let completedQuests = [];
 
 // Unlock an achievement by Obj.key
 function unlockAchievementOrQuestByKey(key) {
 // initain=l achievement check
-   if(!unlockedAchievments.includes(key)) {
+   if(!unlockedAchievements.includes(key)) {
    const achievement = allAchievements.find(a => a.key === key);
       if (achievement) {
       unlockedAchievements.push(key);
@@ -61,8 +61,8 @@ function unlockAchievementOrQuestByKey(key) {
 // secondly check quests
 if (!completedQuests.includes(key)) {
 const quest = allQuests.find(q => q.key === key);
-    if (quest && !quest.complete) {
-      quest.complete = true;
+    if (quest && !quest.completed) {
+      quest.completed = true;
       completedQuests.push(key);
       text.innerText += `\n🗺️ Quest Complete: ${quest.name}!`;
       updateProgressUI();
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", updateProgressUI);
     const healthText = document.querySelector("#healthText");
     const armorText = document.querySelector("#armorText")
     const goldText = document.querySelector("#goldText");
-    const BeAstStats = document.querySelector("#BeAstStats") || document.querySelector("#monsterStats") ;
+    const beastState = document.querySelector("#BeAstStats") || document.querySelector("#monsterStats") ;
     const monsterName = document.querySelector("#monsterName");
     const monsterHealthText = document.querySelector("#monsterHealthText")
     //New quest feature update to UI
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", updateProgressUI);
         update(locations[0]);
         // const info = document.querySelector("#button1"); //Modify the innerText to my stats  //Change the text appearence after button clicked
         // button1.innerText = "Go to store";                                                   //Update for buttons in an instance they are clicked again
-        // button1.onclick = goStore;                     //Modify the onclick to myHealth,Weapon, instead of buy                                       //lead the button click to change their previou stats
+        // button1.onclick = goStore;                     //Modify the onclick to myHealth,Weapon, instead of buy                                       //lead the button click to change their previous stats
         // button2.innerText = "Go to cave";
         // button2.onclick = goCave;
         // button3.innerText = "Fight FiRedragon";
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", updateProgressUI);
         update(locations[1])
         // const info = document.querySelector("#button1"); //Change the text appearence after button clicked
         // button1.innerText = "Buy 10 health (10 gold)";//Update for buttons in an instance they are clicked again
-        // button1.onclick = buyHealth; //lead the button click to change their previou stats
+        // button1.onclick = buyHealth; //lead the button click to change their previous stats
         // button2.innerText = "Buy weapon (30 gold)";
         // button2.onclick = buyWeapon;
         // button3.innerText = "Go to town square";
@@ -186,7 +186,7 @@ function myWeapon() {   // create function to take the actions that happen in "s
   goldText.innerText = gold;
   let newWeapon = weapons[currentWeaponIndex].name;//use the dot notation for new weapon
   text.innerText = "You now have a " + newWeapon + "."  //create the commentary log when you purchase a new weapon from store
-  inventory.push(myWeapon); //show the log commentary of the new equipped weapon
+  inventory.push(newWeapon); //show the log commentary of the new equipped weapon
   text.innerText += " In your inventory you have: " + inventory//after the updated innerText for the new weapon log commentary include the inventory text using a second innerText with +=
                                                                 //add the inventory operation by concatinating
     }                                                              // add an else statement if the gold you have is insufficient 
@@ -201,7 +201,7 @@ button2.onclick = sellWeapon;
 }
 //creating an empty location function to take care of goTown and goStore repetions
 function update(location) {
-    BeAstStats.style.display = "none";//The monsters stats should no be displayed after defeated using style and display
+    beastState.style.display = "none";//The monsters stats should no be displayed after defeated using style and display
     button1.innerText = location["button text"][0];//use arrays instead of bracket notations "Go to store"
     button2.innerText = location["button text"][1];// change all innerText values into location arrays
     button3.innerText = location["button text"][2];
@@ -254,7 +254,7 @@ health: 300,
 const locations = [
     {
 name: "town square", //keep commas between an array NOT semi colons
-"button text": ["Go to store", "Go to cave", "Figh FiRedragon"], //This is a button text within an array done correctly
+"button text": ["Go to store", "Go to cave", "Fight FiRedragon"], //This is a button text within an array done correctly
 "button functions": [goStore, goCave, fightDragon], // use onclick arrays that will achieve the buttons functions
 text: "You are in the town square. You see a sign that says \"Store\"." // add text properties from the innertext values
     },
@@ -278,7 +278,7 @@ text: "You are fighting a monster."
         },
         {
  name: "kill monster",
-   "button text": ["Go to town square", "Go to town square", "Go to town square"],
+   "button text": ["Go to town square?", "Go to town square", "Go to town square"],
    "button functions": [goTown, goTown, easterEgg],
   text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.' //The word "Arg!" should have quotes around it. Besides escaping quotes, there is another way you can include quotation marks inside a string.
     }, //Create a fifth object in locations array to address what happen when a use kills a beast
@@ -331,18 +331,18 @@ text.innerText = "Don't sell your only weapon!"
 //Create goFight function to manage monster fight logic.
 function goFight() {
   update(locations[3])           // In the `goFight` function, called the `update` function with the fourth object in the `locations` array as an argument.
-  BEaSthealth = monsters[fighting].health;                       //Set the monster health bars to their beast
-     BeAstStats.style.display = "block";                                          //Display monster stats when Fight dragon button is clicked.
+  beastHealth = monsters[fighting].health;                       //Set the monster health bars to their beast
+     beastState.style.display = "block";                                          //Display monster stats when Fight dragon button is clicked.
       monsterName.innerText =  monsters[fighting].name;                                     //Update the text alongside the new button and style display
     monsterHealthText.innerText = monsterHealth;
     }
 //Create two combat interactive options atk and dodg
 function attack() { //Build attack function to update text message with monster name using the concatenation operator.
-text.innerText = "The " + monsters[fighting].name + "attacks. ";
+text.innerText = "The " + monsters[fighting].name + " attacks. ";
    text.innerText += " You attack it with your "  + weapons[currentWeaponIndex].name + ".";// On a new line in the `attack` function, used the addition assignment operator (+=) to add the string " You attack it with your <weapon>." to the text value.                                                      //Add a new text message for the weapon you are battling with ie atk 
     health -= getMonsterAttackValue(monsters[fighting].level); //Update health to subtract monster's level. //Your health decreases by the monster's attack value, which is calculated using the monster's level.
     if(isMonsterHit()) {
-      BEaSthealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * exp) + 1; //Introduce Math object and use random number generation in attack logic.
+      beastHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * exp) + 1; //Introduce Math object and use random number generation in attack logic.
     } else {
         text.innerText += " You miss.";//create an if else statement for any misses you have in a  battle
       }                         //ensures that the monster's health only decreases if the isMonsterHit function returns true.
@@ -350,7 +350,7 @@ text.innerText = "The " + monsters[fighting].name + "attacks. ";
   monsterHealthText.innerText = monsterHealth;                 //Update the innerText of user(s) health and monsters health bar
   if(health <= 0){
 lose()
-  }   else if (BEaSthealth <= 0 ){
+  }   else if (beastHealth <= 0 ){
 defeatMonster();
 if (fighting === 2) {                             //Make my game complex beyond it's feature-completed amd maek stages fun and engaging give monsters a dynamic attack value.
 winGame();
@@ -363,12 +363,12 @@ defeatMonster();
 // - Moved the `defeatMonster()` call to the `else` block.
   }             //To give the weapons durabilty use an if statement to let the weapon break via chance
   if(Math.random() <= .1 && inventory.length !== 1) { //Create the text that shows up when your weapon breaks by chance below //Add a second condition taht precent your only weapon from breaking
-text.innerText += " Your " + inventory.pop() + " breaks."//use the decrement opewrator to show you have one less weapon now
+text.innerText += " Your " + inventory.pop() + " breaks.";//use the decrement opewrator to show you have one less weapon now
 currentWeaponIndex--;
   }                                    //Create the lose in a battle function with zero or less health in an if/else statement
 }  //Add else if statement to check monsterHealth and call defeatMonster.
        //Create a new getMonsterAttackValue with parameter to level from monsters
-       function getMonsterAttackValue(level){// create a "hit variable" - This will set the monster's attack to five times their level minus a random number between 0 and the player's xp.
+       function getMonsterAttackValue(level){// create a "hit variable" - This will set the monster's attack to five times their level minus a random number between 0 and the player's exp.
 const hit = (level * 5) - (Math.floor(Math.random() * exp));
 console.log(hit);
 return hit > 0 ? hit : 0;
@@ -379,7 +379,7 @@ text.innerText = "You dodge the attack from the " + monsters[fighting].name + ".
 //Create defeatMonster and lose function
 function defeatMonster() { //Update gold calculation in defeatMonster function to be 6.7 times the monsters lvl
 gold += Math.floor(monsters[fighting].level * 6.7) + 1;
-    exp += monsters[fighting].name;                                                  //Show th exp gained in exp = exp + monsters lvl user fought
+    exp += monsters[fighting].name;                                                  //Show th exp gained in exp = exp + monsters level user fought
    goldText.innerText = gold;
    expText.innerText = exp;                                       //Update the values to be displayed now on screen using innerText
    update(locations[4]);                        //Complete defeatMonster function by calling update with locations[4].<--This does notexist, yet
@@ -389,7 +389,7 @@ update(locations[5]);
 }
 //Below the lose function create the winGame functiuon
 function winGame() {
-    update(location[6]);
+    update(locations[6]);
   }
 //Create a restart function for when you get revived to life LEL
 function restart() {
