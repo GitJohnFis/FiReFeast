@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Setting up character encoding for proper text display -->
     <meta charset="UTF-8" />
-    <title>title</title>
+    <!-- Page title, can be customized later -->
+    <title>FiReFeast Repeller</title>
 </head>
 <body>
+    <!-- Main game container for all UI elements -->
     <div id="game"> 
         <!-- Interface for the BeAst interactions --> 
-      <div id="stats"> <span class="stat">EXP: <strong><span id="expText">0</span></strong></span>  
-        <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>  
-        <span class="stat">Armor: <strong><span id="armorText">10</span></strong></span> 
-        <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span> 
-    </div> 
-        <!-- Conrols for different locations -->
-      <div id="controls"> 
-        <button id="button1">Go to store</button> 
-        <button id="button2">Go to cave</button> 
-        <button id="button3">Fight FiRedragon</button> 
-    </div> 
-      <div id="BeAstStats">  
-        <span class="stat">BeAst Name: <strong><span id="monsterName"></span></strong></span> 
-        <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span> 
-    </div> 
-      <div id="text"> 
-        Welcome to FiReFeast Repeller. You must defeat the FiRedragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above. 
-      </div> 
+        <!-- Stats section to display player attributes -->
+        <div id="stats"> 
+            <!-- EXP: Tracks player experience points, abbrev. for experience -->
+            <span class="stat">EXP: <strong><span id="expText">0</span></strong></span>  
+            <!-- Health: Player's hit points, starting at 100 -->
+            <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>  
+            <!-- Armor: Defensive stat, reduces damage taken -->
+            <span class="stat">Armor: <strong><span id="armorText">10</span></strong></span> 
+            <!-- Gold: Currency for in-game purchases -->
+            <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span> 
+        </div> 
+        <!-- Controls section for navigation and actions -->
+        <div id="controls"> 
+            <!-- Button to access store for buying items -->
+            <button id="button1">Go to store</button> 
+            <!-- Button to enter cave, likely for exploration or combat -->
+            <button id="button2">Go to cave</button> 
+            <!-- Button to initiate boss fight with FiRedragon -->
+            <button id="button3">Fight FiRedragon</button> 
+        </div> 
+        <!-- BeAstStats section to show enemy details -->
+        <div id="BeAstStats">  
+            <!-- BeAst Name: Displays current enemy's name, e.g., FiRedragon -->
+            <span class="stat">BeAst Name: <strong><span id="monsterName"></span></strong></span> 
+            <!-- Health: Shows enemy's current health -->
+            <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span> 
+        </div> 
+        <!-- Text area for game narrative and updates -->
+        <div id="text"> 
+            <!-- Intro text sets the scene, guides player to use buttons -->
+            Welcome to FiReFeast Repeller. You must defeat the FiRedragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above. 
+        </div> 
     </div> 
 </body>
 </html>
