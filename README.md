@@ -66,7 +66,7 @@
 ```mermaid
 flowchart TD
     User[User Browser]
-    User --> UI[HTML Game UI]
+    User --> UIX[HTML Game UIX]
     UI --> CSS[CSS Styling]
     UI --> JS[JavaScript Game Logic]
     UI --> Assets[Assets/Images]
