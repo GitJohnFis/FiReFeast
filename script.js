@@ -186,7 +186,7 @@ function myWeapon() {   // create function to take the actions that happen in "s
   goldText.innerText = gold;
   let newWeapon = weapons[currentWeaponIndex].name;//use the dot notation for new weapon
   text.innerText = "You now have a " + newWeapon + "."  //create the commentary log when you purchase a new weapon from store
-  inventory.push(myWeapon); //show the log commentary of the new equipped weapon
+  inventory.push(newWeapon); //show the log commentary of the new equipped weapon
   text.innerText += " In your inventory you have: " + inventory//after the updated innerText for the new weapon log commentary include the inventory text using a second innerText with +=
                                                                 //add the inventory operation by concatinating
     }                                                              // add an else statement if the gold you have is insufficient 
